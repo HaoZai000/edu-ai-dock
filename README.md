@@ -20,9 +20,10 @@
 │  ├─ _template/             # 新增学校时整份复制改名
 │  │  ├─ adapters.yaml
 │  │  └─ adapter-template.js
-│  └─ DEMO/                  # 目录名 = root_index 里的 id
+│  └─ CUG/                   # 目录名 = root_index 里的 id
 │     ├─ adapters.yaml       # 这所学校的适配器说明（可以有多个）
-│     └─ demo.js
+│     ├─ cug.js
+│     └─ cug_postgraduate.js
 ├─ scripts/build_index.py    # CI 调用的构建脚本
 └─ .github/workflows/build-index.yml
 ```
@@ -107,18 +108,27 @@ adapters:
   "version_id": "2026-11-16T08:52:15Z",
   "schools": [
     {
-      "id": "DEMO",
-      "name": "示例大学（Demo）",
-      "initial": "S",
+      "id": "CUG",
+      "name": "中国地质大学（武汉）",
+      "initial": "C",
       "adapters": [
         {
-          "adapter_id": "DEMO_01",
-          "adapter_name": "示例适配（导入一门测试课程）",
+          "adapter_id": "CUG_01",
+          "adapter_name": "中国地质大学（武汉）正方教务",
           "category": 2,
-          "asset_js_path": "resources/DEMO/demo.js",
-          "import_url": "https://example.com",
-          "description": "示例适配器：在任意页面执行，导入一门测试课程。",
-          "maintainer": "edu-ai-dock"
+          "asset_js_path": "resources/CUG/cug.js",
+          "import_url": "https://sfrz.cug.edu.cn/authserver/login",
+          "description": "正方教务系统 API 适配。登录任意页面一键导入，支持南望山与未来城校区作息。",
+          "maintainer": "kncatl"
+        },
+        {
+          "adapter_id": "CUG_02",
+          "adapter_name": "中国地质大学（武汉）研究生教务",
+          "category": 3,
+          "asset_js_path": "resources/CUG/cug_postgraduate.js",
+          "import_url": "https://epo.cug.edu.cn",
+          "description": "研究生教务管理系统。登录并定位到学期课表页面后点击导入。",
+          "maintainer": "JiaLiFuNia"
         }
       ]
     }
