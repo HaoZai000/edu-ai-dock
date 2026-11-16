@@ -1,22 +1,15 @@
 # edu-ai-dock
 
-AI 教务导入生成的适配脚本仓库。客户端（NexioSchedule / 时光）会把本仓库与拾光仓库
-（`shiguang_warehouse`）**一起拉取、合并展示**，AI 来源的适配器卡片叠一层淡蓝色底作区分。
+教务系统适配脚本仓库，由 AI 生成、人工维护，**Nexio 课程表**与 **SleepDown 课程表**共用同一份索引与脚本。
+两个客户端读取同一份 `index/school_index.json`，在教务导入页里展示同一批学校与适配器，
+点开适配器时才按需下载对应脚本。
 
-- GitHub（主仓）：`https://github.com/HaoZai000/edu-ai-dock`
+- GitHub：`https://github.com/HaoZai000/edu-ai-dock`
 - Gitee（镜像）：`https://gitee.com/com_haooz_account/edu-ai-dock`
 
-## 结构（与拾光一致）
+## 结构
 
-和拾光一样：根索引登记学校，每所学校一个 `adapters.yaml` 写多个适配器，脚本与它同级。
-拾光用 CI 把 YAML 编成 pb，这里用 CI 把它编成 JSON，客户端只读编好的那一份：
-
-| 拾光仓库 | 本仓库 |
-| --- | --- |
-| `index/root_index.yaml` | `index/root_index.yaml` |
-| `resources/{学校}/adapters.yaml` | `resources/{学校}/adapters.yaml` |
-| `resources/{学校}/{脚本}.js` | `resources/{学校}/{脚本}.js` |
-| CI → `school_index.pb` | CI → `index/school_index.json` |
+索引由 CI 从 YAML 生成，客户端只读生成好的 JSON，编辑时只改 YAML：
 
 ```
 .
@@ -28,19 +21,25 @@ AI 教务导入生成的适配脚本仓库。客户端（NexioSchedule / 时光�
 │  │  ├─ adapters.yaml
 │  │  └─ adapter-template.js
 │  └─ DEMO/                  # 目录名 = root_index 里的 id
-│     ├─ adapters.yaml       # 示例适配器（验证链路用，正式发版删掉）
+│     ├─ adapters.yaml       # 这所学校的适配器说明（可以有多个）
 │     └─ demo.js
-├─ scripts/build_index.py    # CI 用的构建脚本
+├─ scripts/build_index.py    # CI 调用的构建脚本
 └─ .github/workflows/build-index.yml
 ```
 
-没有 `schema/` 目录：字段校验直接在构建脚本里做，缺字段、分类写错、脚本文件不存在都会让 CI 失败并指出是哪一条。
+- `index/root_index.yaml`：学校列表，字段 `id` / `name` / `initial`。
+- `resources/{id}/adapters.yaml`：这所学校的全部适配器，数组里写几条就有几个适配器。
+- `resources/{id}/{脚本}.js`：脚本与 `adapters.yaml` 同级，`asset_js_path` 只写文件名。
+- 推送后 CI 自动把 YAML 编成 `index/school_index.json`，内容没变化时不会产生提交。
+
+构建脚本会校验：学校 id 与适配器 id 唯一、`category` 合法、`asset_js_path` 是同目录 `.js` 文件且真实存在。
+任何一项不合法都会让 CI 失败，并指出是哪所学校、哪个适配器的哪个字段。
 
 ## 新增学校
 
 1. 复制 `resources/_template` → `resources/{学校缩写}`；
 2. 改 `adapters.yaml`，放脚本文件；
-3. 在 `index/root_index.yaml` 的 `schools` 里加一条：
+3. 在 `index/root_index.yaml` 的 `schools` 里登记一行：
 
 ```yaml
 schools:
@@ -49,8 +48,10 @@ schools:
     initial: "C"
 ```
 
-然后推上去，CI 自动重建 `index/school_index.json`。`id` 尽量与拾光仓库同校一致；
-不同时客户端按 `name` 兜底合并，连名字都不同就会变成两所学校。
+4. 推送，等 CI 重建 `index/school_index.json`。
+
+`id` 全局唯一，同时作为目录名，建议用学校缩写；`initial` 是单个大写字母，用于列表分组。
+如果同一所学校要同时提供给两个客户端，只维护这一份，不要在客户端里写死。
 
 ## 一个学校多个适配器
 
@@ -75,14 +76,17 @@ adapters:
     description: "研究生教务管理系统。登录并定位到学期课表页面后点击导入。"
 ```
 
-- 数组里**几项就是几个适配器**，`adapter_id` 校内唯一（建议 `学校ID_序号`），发布后不复用。
-- `category` 与拾光一致：`BACHELOR_AND_ASSOCIATE`（本科/专科）、`POSTGRADUATE`（研究生）、`GENERAL_TOOL`（通用工具）。
-- `asset_js_path` 只写**同目录下的文件名**，每个适配器一个脚本；新增同校第二个适配器时追加一项 + 放一个脚本，不要替换原有条目。
-- 与拾光同校同 `adapter_id` 时，客户端按 `(来源, adapter_id)` 去重且**拾光优先**；AI 版本要并存请换一个 id。
+规则：
+
+- 数组里有几项就是几个适配器，`adapter_id` 校内唯一（建议 `学校ID_序号`），发布后不复用。
+- `category`：`BACHELOR_AND_ASSOCIATE`（本科/专科）、`POSTGRADUATE`（研究生）、`GENERAL_TOOL`（通用工具）。
+- 每个适配器一个脚本文件，与 `adapters.yaml` 同级；文件名不要求和 `adapter_id` 相同。
+- 新增同校第二个适配器：往 `adapters` 数组**追加**一项 + 放一个脚本，不要替换原有条目。
+- 两个客户端的导入页都支持同一所学校下显示多个适配器，选择后各自打开对应的 `import_url` 并注入对应脚本。
 
 ## 适配器说明（用户端展示的那一节）
 
-底部弹窗里每个适配器卡片展示的内容，全部来自 `adapters.yaml`，字段与拾光一一对应：
+两个客户端展示的适配器卡片内容，全部来自 `adapters.yaml`：
 
 | 卡片上展示 | 字段 | 说明 |
 | --- | --- | --- |
@@ -90,25 +94,90 @@ adapters:
 | 右上角分类 | `category` | 必填，字符串枚举 |
 | 正文说明 | `description` | 必填，直接展示 |
 | 维护者 | `maintainer` | 必填，展示为「维护者：xxx」 |
-| 通用工具入口 | `import_url` | 通用工具类使用 |
-| 卡片底色 | — | AI 仓库来源自动叠淡蓝色，不需要填 |
+| 打开入口 | `import_url` | 点开适配器时网页加载的地址 |
+| 卡片底色 | — | 由客户端决定，不需要填 |
+
+## 生成的索引
+
+`index/school_index.json` 结构固定，供客户端直接解析：
+
+```json
+{
+  "protocol_version": 1,
+  "version_id": "2026-11-16T08:52:15Z",
+  "schools": [
+    {
+      "id": "DEMO",
+      "name": "示例大学（Demo）",
+      "initial": "S",
+      "adapters": [
+        {
+          "adapter_id": "DEMO_01",
+          "adapter_name": "示例适配（导入一门测试课程）",
+          "category": 2,
+          "asset_js_path": "resources/DEMO/demo.js",
+          "import_url": "https://example.com",
+          "description": "示例适配器：在任意页面执行，导入一门测试课程。",
+          "maintainer": "edu-ai-dock"
+        }
+      ]
+    }
+  ]
+}
+```
+
+- `category` 在构建时转成数字：`1` 通用工具、`2` 本科/专科、`3` 研究生。
+- `asset_js_path` 由构建脚本补成仓库内完整路径，客户端直接按它下载。
+- `protocol_version` 是索引协议版本（当前 `1`），客户端遇到更高版本会忽略该索引。
+- `version_id` 由 CI 写入生成时间，仅用于排查。
 
 ## 脚本约定
 
-脚本在教务页面里执行，通过 `window.shiguangBridgePromise` 回写数据（与拾光仓库一致）：
+脚本在教务页面里执行，通过导入桥回写数据。两个客户端提供同一套桥：
 
 ```js
-const N = await shiguangBridgePromise.saveCourseConfig(JSON.stringify({ /* 节次配置 */ }));
-const T = await shiguangBridgePromise.savePresetTimeSlots(JSON.stringify([ /* 作息 */ ]));
-const C = await shiguangBridgePromise.saveImportedCourses(JSON.stringify([ /* 课程 */ ]));
+// 异步方法返回 Promise
+const C = await window.AndroidBridgePromise.saveImportedCourses(JSON.stringify(courses));
+```
+
+可用的桥方法：
+
+| 方法 | 作用 |
+| --- | --- |
+| `saveImportedCourses(json)` | 写入课程数组（必需） |
+| `saveCourseConfig(json)` | 写入作息/学期配置（可选） |
+| `savePresetTimeSlots(json)` | 写入时间段（可选） |
+| `notifyTaskCompletion()` | 告知客户端流程结束 |
+
+课程对象的字段：
+
+```json
+{
+  "name": "高等数学",
+  "teacher": "张三",
+  "position": "教学楼 A101",
+  "day": 1,
+  "startSection": 1,
+  "endSection": 2,
+  "weeks": [1, 2, 3, 4, 5, 6, 7, 8]
+}
 ```
 
 要求：
 
-1. 不写顶层 `await`（会被包进 async 函数执行）。
-2. 课程必须带真实的上课星期、节次与周次；拿不到就抛错，不要猜默认值。
+1. 不写顶层 `await`（脚本会被包进 async 函数执行）。
+2. `day` 必须在 1..7、`weeks` 必须非空、`startSection` 从 1 开始；拿不到就抛错，不要猜默认值。
 3. 不发起与本校教务无关的请求，不读取与课表无关的页面内容。
 4. 脚本里不要出现 token、学号等个人凭据。
+
+## 本地校验
+
+改完 YAML 可以先本地跑一遍构建，确认字段和脚本文件都没问题：
+
+```bash
+pip install pyyaml
+python scripts/build_index.py
+```
 
 ## 免责声明
 
