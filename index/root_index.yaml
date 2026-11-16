@@ -1,3 +1,10 @@
+# index/root_index.yaml
+# 整个仓库的学校列表。CI 会读取它，把每所学校的 resources/{id}/adapters.yaml 编成
+# index/school_index.json（客户端只读那份编好的文件，不要手改它）。
+#
 # 新增学校：复制 resources/_template 改名成学校缩写，然后在这里登记一行。
 
 schools:
+  - id: "HUWAI"
+    name: "湖南外国语职业学院"
+    initial: "H"

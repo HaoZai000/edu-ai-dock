@@ -1,5 +1,22 @@
 {
   "protocol_version": 1,
-  "version_id": "2026-11-16T09:07:44Z",
-  "schools": []
+  "version_id": "2026-11-16T09:19:26Z",
+  "schools": [
+    {
+      "id": "HUWAI",
+      "name": "湖南外国语职业学院",
+      "initial": "H",
+      "adapters": [
+        {
+          "adapter_id": "HUWAI_01",
+          "adapter_name": "湖南外国语职业学院 正方教务",
+          "category": 2,
+          "asset_js_path": "resources/HUWAI/huwai.js",
+          "import_url": "https://jw.huwai.edu.cn:8010/jwglxt/",
+          "description": "正方教务 V9 接口适配。登录后自动读取学年学期、课表、校历与作息，导入前可选择学年与学期。",
+          "maintainer": "AI 生成"
+        }
+      ]
+    }
+  ]
 }
