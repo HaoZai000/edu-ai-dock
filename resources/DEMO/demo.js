@@ -5,9 +5,9 @@
   'use strict';
 
   async function run() {
-    const bridge = window.shiguangBridgePromise;
+    const bridge = window.AndroidBridgePromise;
     if (!bridge) {
-      throw new Error('未找到导入桥：请从时光 / NexioSchedule 的教务导入进入本页');
+      throw new Error('未找到导入桥：请从课程表 App 的教务导入进入本页');
     }
 
     // 一门真实可落库的课：星期 1..7、节次从 1 开始、周次必填
