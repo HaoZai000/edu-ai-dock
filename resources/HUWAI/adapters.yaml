@@ -7,5 +7,5 @@ adapters:
     category: "BACHELOR_AND_ASSOCIATE"
     asset_js_path: "huwai.js"
     import_url: "https://jw.huwai.edu.cn:8010/jwglxt/"
-    maintainer: "AI 生成"
+    maintainer: "Nexio课程表"
     description: "正方教务 V9 接口适配。登录后自动读取学年学期、课表、校历与作息，导入前可选择学年与学期。"
