@@ -1,0 +1,19 @@
+# resources/CUG/adapters.yaml
+# 一所学校的全部适配器写在这一个文件里；脚本与它同级，asset_js_path 只写文件名。
+
+adapters:
+  - adapter_id: "CUG_01"
+    adapter_name: "中国地质大学（武汉）正方教务"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "cug.js"
+    import_url: "https://sfrz.cug.edu.cn/authserver/login"
+    maintainer: "kncatl"
+    description: "正方教务系统 API 适配。登录任意页面一键导入，支持南望山与未来城校区作息。"
+
+  - adapter_id: "CUG_02"
+    adapter_name: "中国地质大学（武汉）研究生教务"
+    category: "POSTGRADUATE"
+    asset_js_path: "cug_postgraduate.js"
+    import_url: "https://epo.cug.edu.cn"
+    maintainer: "JiaLiFuNia"
+    description: "研究生教务管理系统。登录并定位到学期课表页面后点击导入。"

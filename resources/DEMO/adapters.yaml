@@ -1,0 +1,12 @@
+# resources/DEMO/adapters.yaml
+# 示例适配器：不依赖任何教务系统，用来验证「索引 → 脚本下载 → 导入」整条链路。
+# 正式做学校适配时复制 resources/_template，不要在这个目录上改。
+
+adapters:
+  - adapter_id: "DEMO_01"
+    adapter_name: "示例适配（导入一门测试课程）"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "demo.js"
+    import_url: "https://example.com"
+    maintainer: "edu-ai-dock"
+    description: "示例适配器：在任意页面执行，导入一门名为「示例课程」的测试课，用来确认仓库索引与脚本下载正常。"

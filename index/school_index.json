@@ -1,0 +1,22 @@
+{
+  "protocol_version": 1,
+  "version_id": "2026-11-16T08:52:15Z",
+  "schools": [
+    {
+      "id": "DEMO",
+      "name": "示例大学（Demo）",
+      "initial": "S",
+      "adapters": [
+        {
+          "adapter_id": "DEMO_01",
+          "adapter_name": "示例适配（导入一门测试课程）",
+          "category": 2,
+          "asset_js_path": "resources/DEMO/demo.js",
+          "import_url": "https://example.com",
+          "description": "示例适配器：在任意页面执行，导入一门名为「示例课程」的测试课，用来确认仓库索引与脚本下载正常。",
+          "maintainer": "edu-ai-dock"
+        }
+      ]
+    }
+  ]
+}
