@@ -1,6 +1,6 @@
 {
   "protocol_version": 1,
-  "version_id": "2026-11-17T06:05:51Z",
+  "version_id": "2026-11-17T07:03:29Z",
   "schools": [
     {
       "id": "FAFU",
@@ -46,6 +46,22 @@
           "asset_js_path": "resources/HUWAI/huwai.js",
           "import_url": "https://jw.huwai.edu.cn:8010/jwglxt/",
           "description": "正方教务 V9 接口适配。登录后自动读取学年学期、课表、校历与作息，导入前可选择学年与学期。",
+          "maintainer": "Nexio课程表"
+        }
+      ]
+    },
+    {
+      "id": "HBUE",
+      "name": "湖北第二师范学院",
+      "initial": "H",
+      "adapters": [
+        {
+          "adapter_id": "HBUE_01",
+          "adapter_name": "湖北第二师范学院HBUE",
+          "category": 2,
+          "asset_js_path": "resources/HBUE/hbue.js",
+          "import_url": "https://jwxt.hue.edu.cn/",
+          "description": "青果教务课表适配。登录教务系统后直接点导入即可，不需要手动进入课表页；脚本会自动读取学期、整学期课表与作息。若当前页面不是教务系统页面，请先打开一次。",
           "maintainer": "Nexio课程表"
         }
       ]
