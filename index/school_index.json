@@ -1,6 +1,6 @@
 {
   "protocol_version": 1,
-  "version_id": "2026-11-17T07:03:29Z",
+  "version_id": "2026-11-17T15:10:58Z",
   "schools": [
     {
       "id": "FAFU",
@@ -62,6 +62,22 @@
           "asset_js_path": "resources/HBUE/hbue.js",
           "import_url": "https://jwxt.hue.edu.cn/",
           "description": "青果教务课表适配。登录教务系统后直接点导入即可，不需要手动进入课表页；脚本会自动读取学期、整学期课表与作息。若当前页面不是教务系统页面，请先打开一次。",
+          "maintainer": "Nexio课程表"
+        }
+      ]
+    },
+    {
+      "id": "HNKJZY",
+      "name": "湖南科技职业学院",
+      "initial": "H",
+      "adapters": [
+        {
+          "adapter_id": "HNKJZY_01",
+          "adapter_name": "湖南科技职业学院HNKJZY",
+          "category": 2,
+          "asset_js_path": "resources/HNKJZY/hnkjzy.js",
+          "import_url": "https://www.hnkjzy.edu.cn/",
+          "description": "教务系统课表适配。登录教务系统后直接点导入即可，不需要手动进入课表页；脚本会自动读取学期、校区、整学期课表与作息。",
           "maintainer": "Nexio课程表"
         }
       ]
