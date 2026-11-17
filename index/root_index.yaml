@@ -5,6 +5,10 @@
 # 新增学校：复制 resources/_template 改名成学校缩写，然后在这里登记一行。
 
 schools:
+  - id: "FAFU"
+    name: "福建农林大学"
+    initial: "F"
+
   - id: "HUWAI"
     name: "湖南外国语职业学院"
     initial: "H"

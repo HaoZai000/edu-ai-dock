@@ -1,0 +1,11 @@
+# resources/FAFU/adapters.yaml
+# 福建农林大学（正方教务，jwgl.fafu.edu.cn）
+
+adapters:
+  - adapter_id: "FAFU_01"
+    adapter_name: "福建农林大学FAFU"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "fafu.js"
+    import_url: "http://jwgl.fafu.edu.cn/"
+    maintainer: "AI适配"
+    description: "正方教务课表适配。登录教务系统后直接点导入即可，不需要手动进入「课表查询」页；脚本会自动请求课表接口并读取学年/学期。若当前页面无法定位学号，请先打开一次「课表查询」页再导入。"
