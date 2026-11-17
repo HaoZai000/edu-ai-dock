@@ -9,6 +9,10 @@ schools:
     name: "福建农林大学"
     initial: "F"
 
+  - id: "NUIT"
+    name: "广东东软学院"
+    initial: "G"
+
   - id: "HUWAI"
     name: "湖南外国语职业学院"
     initial: "H"

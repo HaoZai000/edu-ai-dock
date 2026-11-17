@@ -1,6 +1,6 @@
 {
   "protocol_version": 1,
-  "version_id": "2026-11-17T05:58:48Z",
+  "version_id": "2026-11-17T06:05:51Z",
   "schools": [
     {
       "id": "FAFU",
@@ -14,6 +14,22 @@
           "asset_js_path": "resources/FAFU/fafu.js",
           "import_url": "http://jwgl.fafu.edu.cn/",
           "description": "正方教务课表适配。登录教务系统后直接点导入即可，不需要手动进入「课表查询」页；脚本会自动请求课表接口并读取学年/学期。",
+          "maintainer": "Nexio课程表"
+        }
+      ]
+    },
+    {
+      "id": "NUIT",
+      "name": "广东东软学院",
+      "initial": "G",
+      "adapters": [
+        {
+          "adapter_id": "NUIT_01",
+          "adapter_name": "广东东软学院NUIT",
+          "category": 2,
+          "asset_js_path": "resources/NUIT/nuit.js",
+          "import_url": "http://jw.nuit.edu.cn/",
+          "description": "教务系统课表适配（仅校园网可访问）。登录教务系统后直接点导入即可，不需要手动进入课表页；脚本会自动读取学期、校区、整学期课表与作息。",
           "maintainer": "Nexio课程表"
         }
       ]
