@@ -6,6 +6,6 @@ adapters:
     adapter_name: "西安邮电大学XUPT"
     category: "BACHELOR_AND_ASSOCIATE"
     asset_js_path: "xupt.js"
-    import_url: "https://zfjw.xupt.edu.cn/"
-    maintainer: "AI适配"
+    import_url: "https://auth.xupt.edu.cn/esc-sso/login/page"
+    maintainer: "Nexio课程表"
     description: "正方教务课表适配。登录教务系统后直接点导入即可，不需要手动进入「课表查询」页；脚本会自动请求整学期课表与节次作息。若当前页面不是教务系统页面，请先打开一次。"

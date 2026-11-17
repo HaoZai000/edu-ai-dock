@@ -1,6 +1,6 @@
 {
   "protocol_version": 1,
-  "version_id": "2026-11-17T05:53:38Z",
+  "version_id": "2026-11-17T05:58:48Z",
   "schools": [
     {
       "id": "FAFU",
@@ -14,7 +14,7 @@
           "asset_js_path": "resources/FAFU/fafu.js",
           "import_url": "http://jwgl.fafu.edu.cn/",
           "description": "正方教务课表适配。登录教务系统后直接点导入即可，不需要手动进入「课表查询」页；脚本会自动请求课表接口并读取学年/学期。",
-          "maintainer": "AI适配"
+          "maintainer": "Nexio课程表"
         }
       ]
     },
@@ -44,9 +44,9 @@
           "adapter_name": "西安邮电大学XUPT",
           "category": 2,
           "asset_js_path": "resources/XUPT/xupt.js",
-          "import_url": "https://zfjw.xupt.edu.cn/",
+          "import_url": "https://auth.xupt.edu.cn/esc-sso/login/page",
           "description": "正方教务课表适配。登录教务系统后直接点导入即可，不需要手动进入「课表查询」页；脚本会自动请求整学期课表与节次作息。若当前页面不是教务系统页面，请先打开一次。",
-          "maintainer": "AI适配"
+          "maintainer": "Nexio课程表"
         }
       ]
     }

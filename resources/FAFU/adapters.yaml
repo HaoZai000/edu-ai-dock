@@ -7,5 +7,5 @@ adapters:
     category: "BACHELOR_AND_ASSOCIATE"
     asset_js_path: "fafu.js"
     import_url: "http://jwgl.fafu.edu.cn/"
-    maintainer: "AI适配"
+    maintainer: "Nexio课程表"
     description: "正方教务课表适配。登录教务系统后直接点导入即可，不需要手动进入「课表查询」页；脚本会自动请求课表接口并读取学年/学期。"
