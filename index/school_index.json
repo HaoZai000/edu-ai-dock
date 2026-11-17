@@ -1,6 +1,6 @@
 {
   "protocol_version": 1,
-  "version_id": "2026-11-17T02:58:18Z",
+  "version_id": "2026-11-17T03:03:08Z",
   "schools": [
     {
       "id": "FAFU",
@@ -13,7 +13,7 @@
           "category": 2,
           "asset_js_path": "resources/FAFU/fafu.js",
           "import_url": "http://jwgl.fafu.edu.cn/",
-          "description": "正方教务课表适配。登录教务系统后直接点导入即可，不需要手动进入「课表查询」页；脚本会自动请求课表接口并读取学年/学期。若当前页面无法定位学号，请先打开一次「课表查询」页再导入。",
+          "description": "正方教务课表适配。登录教务系统后直接点导入即可，不需要手动进入「课表查询」页；脚本会自动请求课表接口并读取学年/学期。",
           "maintainer": "AI适配"
         }
       ]
