@@ -12,3 +12,7 @@ schools:
   - id: "HUWAI"
     name: "湖南外国语职业学院"
     initial: "H"
+
+  - id: "XUPT"
+    name: "西安邮电大学"
+    initial: "X"

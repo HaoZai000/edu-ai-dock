@@ -1,6 +1,6 @@
 {
   "protocol_version": 1,
-  "version_id": "2026-11-17T03:03:08Z",
+  "version_id": "2026-11-17T05:53:38Z",
   "schools": [
     {
       "id": "FAFU",
@@ -31,6 +31,22 @@
           "import_url": "https://jw.huwai.edu.cn:8010/jwglxt/",
           "description": "正方教务 V9 接口适配。登录后自动读取学年学期、课表、校历与作息，导入前可选择学年与学期。",
           "maintainer": "Nexio课程表"
+        }
+      ]
+    },
+    {
+      "id": "XUPT",
+      "name": "西安邮电大学",
+      "initial": "X",
+      "adapters": [
+        {
+          "adapter_id": "XUPT_01",
+          "adapter_name": "西安邮电大学XUPT",
+          "category": 2,
+          "asset_js_path": "resources/XUPT/xupt.js",
+          "import_url": "https://zfjw.xupt.edu.cn/",
+          "description": "正方教务课表适配。登录教务系统后直接点导入即可，不需要手动进入「课表查询」页；脚本会自动请求整学期课表与节次作息。若当前页面不是教务系统页面，请先打开一次。",
+          "maintainer": "AI适配"
         }
       ]
     }
