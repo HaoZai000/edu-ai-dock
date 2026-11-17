@@ -21,6 +21,10 @@ schools:
     name: "湖北第二师范学院"
     initial: "H"
 
+  - id: "HNKJZY"
+    name: "湖南科技职业学院"
+    initial: "H"
+
   - id: "XUPT"
     name: "西安邮电大学"
     initial: "X"

@@ -1,0 +1,10 @@
+# 湖南科技职业学院（www.hnkjzy.edu.cn，无网络限制）
+
+adapters:
+  - adapter_id: "HNKJZY_01"
+    adapter_name: "湖南科技职业学院HNKJZY"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "hnkjzy.js"
+    import_url: "https://www.hnkjzy.edu.cn/"
+    maintainer: "Nexio课程表"
+    description: "教务系统课表适配。登录教务系统后直接点导入即可，不需要手动进入课表页；脚本会自动读取学期、校区、整学期课表与作息。"
