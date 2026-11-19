@@ -44,3 +44,7 @@ schools:
   - id: "XAUAT"
     name: "西安建筑科技大学"
     initial: "X"
+
+  - id: "ZZKJ"
+    name: "郑州科技学院"
+    initial: "Z"

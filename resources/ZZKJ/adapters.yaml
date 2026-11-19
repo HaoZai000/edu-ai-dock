@@ -1,0 +1,10 @@
+# 郑州科技学院（jwgl.zit.edu.cn，定制 JSP 教务）
+
+adapters:
+  - adapter_id: "ZZKJ_01"
+    adapter_name: "郑州科技学院ZZKJ"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "zzkj.js"
+    import_url: "https://jwgl.zit.edu.cn/cas/login.action"
+    maintainer: "Nexio课程表"
+    description: "定制 JSP 教务课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期、整学期课表、作息与开学日期。"
