@@ -1,6 +1,6 @@
 {
   "protocol_version": 1,
-  "version_id": "2026-11-19T13:46:03Z",
+  "version_id": "2026-11-19T13:50:25Z",
   "schools": [
     {
       "id": "FAFU",
@@ -159,6 +159,22 @@
           "import_url": "https://swjw.xauat.edu.cn/student/login/",
           "description": "适用于本科。登录统一身份认证并进入教务系统后，点击导入并选择学期。部分实验课同时安排多个教室，请在导入后按实际情况核对。",
           "maintainer": "pu-007"
+        }
+      ]
+    },
+    {
+      "id": "ZZKJ",
+      "name": "郑州科技学院",
+      "initial": "Z",
+      "adapters": [
+        {
+          "adapter_id": "ZZKJ_01",
+          "adapter_name": "郑州科技学院ZZKJ",
+          "category": 2,
+          "asset_js_path": "resources/ZZKJ/zzkj.js",
+          "import_url": "https://jwgl.zit.edu.cn/cas/login.action",
+          "description": "定制 JSP 教务课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期、整学期课表、作息与开学日期。",
+          "maintainer": "Nexio课程表"
         }
       ]
     }
