@@ -28,3 +28,7 @@ schools:
   - id: "XUPT"
     name: "西安邮电大学"
     initial: "X"
+
+  - id: "SWU"
+    name: "西南大学"
+    initial: "X"
