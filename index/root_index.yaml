@@ -25,6 +25,10 @@ schools:
     name: "湖南科技职业学院"
     initial: "H"
 
+  - id: "HPU"
+    name: "河南理工大学"
+    initial: "H"
+
   - id: "XUPT"
     name: "西安邮电大学"
     initial: "X"
