@@ -13,6 +13,10 @@ schools:
     name: "广东东软学院"
     initial: "G"
 
+  - id: "GDYSYY"
+    name: "广东亚视演艺职业学院"
+    initial: "G"
+
   - id: "HUWAI"
     name: "湖南外国语职业学院"
     initial: "H"

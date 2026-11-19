@@ -1,0 +1,10 @@
+# 广东亚视演艺职业学院（218.15.231.30:8095，正方 V9 教务）
+
+adapters:
+  - adapter_id: "GDYSYY_01"
+    adapter_name: "广东亚视演艺职业学院GDYSYY"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "gdysyy.js"
+    import_url: "http://218.15.231.30:8095/jwglxt/xtgl/login_slogin.html"
+    maintainer: "Nexio课程表"
+    description: "正方教务 V9 接口适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期、整学期课表与作息。"
