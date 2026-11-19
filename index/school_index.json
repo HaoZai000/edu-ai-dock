@@ -1,6 +1,6 @@
 {
   "protocol_version": 1,
-  "version_id": "2026-11-19T08:20:45Z",
+  "version_id": "2026-11-19T13:43:43Z",
   "schools": [
     {
       "id": "FAFU",
@@ -78,6 +78,22 @@
           "asset_js_path": "resources/HNKJZY/hnkjzy.js",
           "import_url": "https://www.hnkjzy.edu.cn/",
           "description": "教务系统课表适配。登录教务系统后直接点导入即可，不需要手动进入课表页；脚本会自动读取学期、校区、整学期课表与作息。",
+          "maintainer": "Nexio课程表"
+        }
+      ]
+    },
+    {
+      "id": "HPU",
+      "name": "河南理工大学",
+      "initial": "H",
+      "adapters": [
+        {
+          "adapter_id": "HPU_01",
+          "adapter_name": "河南理工大学HPU",
+          "category": 2,
+          "asset_js_path": "resources/HPU/hpu.js",
+          "import_url": "https://zhlg.hpu.edu.cn/",
+          "description": "正方 eams 教务课表适配。登录教务系统后直接点导入即可，不需要手动进入课表页；脚本会自动读取学期、整学期课表与作息。",
           "maintainer": "Nexio课程表"
         }
       ]
