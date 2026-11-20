@@ -1,0 +1,8 @@
+adapters:
+  - adapter_id: "YNMEC_01"
+    adapter_name: "云南机电职业技术学院YNMEC"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "ynmec.js"
+    import_url: "https://cas.ynmec.edu.cn/lyuapServer/login?service=https%3A%2F%2Fjwxt.ynmec.edu.cn%2Fjwapp%2Fsys%2Fkbapp%2F*default%2Findex.do%3FTHEME%3Dindigo%26THEME_VARIABLES%3D%26RADIUS%3D20%26EMAP_LANG%3Dzh%26forceApp%3Dkbapp"
+    maintainer: "Nexio课程表"
+    description: "金智教务课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会读取学年学期、校区、校历周数、节次作息与整学期课表。支持学期和校区选择，导入前会二次确认。"
