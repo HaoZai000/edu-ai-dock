@@ -1,0 +1,10 @@
+# 大连民族大学（jwyd.dlnu.edu.cn，SPA 教务）
+
+adapters:
+  - adapter_id: "DLNU_01"
+    adapter_name: "大连民族大学DLNU"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "dlnu.js"
+    import_url: "http://jwyd.dlnu.edu.cn/sjd/#/login"
+    maintainer: "Nexio课程表"
+    description: "定制 SPA 教务课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期、整学期课表与作息。"
