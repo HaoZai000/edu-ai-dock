@@ -1,0 +1,8 @@
+adapters:
+  - adapter_id: "JMPT_01"
+    adapter_name: "江门职业技术学院JMPT"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "jmpt.js"
+    import_url: "http://10.4.2.11:8181/JmptJwxt/ZzUsrLogin"
+    maintainer: "Nexio课程表"
+    description: "教务系统课表适配，仅校园网可访问。登录后直接点导入即可，不需要手动进入课表页；脚本会读取当前学期整学期课表页面，解析课程、周次（含单双周）与 12 节作息。导入前会二次确认。"
