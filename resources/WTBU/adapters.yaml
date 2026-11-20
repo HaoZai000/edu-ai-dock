@@ -1,0 +1,8 @@
+adapters:
+  - adapter_id: "WTBU_01"
+    adapter_name: "武汉工商学院WTBU"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "wtbu.js"
+    import_url: "https://portal.wtbu.edu.cn/"
+    maintainer: "Nexio课程表"
+    description: "正方 EAMS 教务课表适配。登录教务系统后直接点导入即可，不需要手动进入课表页；脚本会读取学年学期、整学期课表，并尽力读取页面中的作息时间。可切换学年学期，导入前会二次确认。"

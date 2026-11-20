@@ -45,6 +45,10 @@ schools:
     name: "河南牧业经济学院"
     initial: "H"
 
+  - id: "WTBU"
+    name: "武汉工商学院"
+    initial: "W"
+
   - id: "XUPT"
     name: "西安邮电大学"
     initial: "X"
