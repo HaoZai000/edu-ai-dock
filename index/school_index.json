@@ -1,7 +1,23 @@
 {
   "protocol_version": 1,
-  "version_id": "2026-11-19T13:50:25Z",
+  "version_id": "2026-11-20T02:21:51Z",
   "schools": [
+    {
+      "id": "DLNU",
+      "name": "大连民族大学",
+      "initial": "D",
+      "adapters": [
+        {
+          "adapter_id": "DLNU_01",
+          "adapter_name": "大连民族大学DLNU",
+          "category": 2,
+          "asset_js_path": "resources/DLNU/dlnu.js",
+          "import_url": "http://jwyd.dlnu.edu.cn/sjd/#/login",
+          "description": "定制 SPA 教务课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期、整学期课表与作息。",
+          "maintainer": "Nexio课程表"
+        }
+      ]
+    },
     {
       "id": "FAFU",
       "name": "福建农林大学",
