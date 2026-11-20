@@ -7,4 +7,4 @@ adapters:
     asset_js_path: "dlnu.js"
     import_url: "http://jwyd.dlnu.edu.cn/sjd/#/login"
     maintainer: "Nexio课程表"
-    description: "定制 SPA 教务课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期、整学期课表与作息。"
+    description: "定制 SPA 教务课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期、整学期课表与作息。多校区时先选择校区。"

@@ -253,6 +253,14 @@
         byNum[secs[0]] = { number: secs[0], startTime: s, endTime: e };
         return;
       }
+      // 大节常见是 2 小节 × 45 分钟；100 分钟的大节中间有 10 分钟课间，90 分钟的没有
+      if (secs.length === 2 && total >= 90) {
+        const firstEnd = addMinutes(s, 45);
+        const secondStart = total > 90 ? addMinutes(firstEnd, total - 90) : firstEnd;
+        byNum[secs[0]] = { number: secs[0], startTime: s, endTime: firstEnd };
+        byNum[secs[1]] = { number: secs[1], startTime: secondStart, endTime: e };
+        return;
+      }
       const step = total / secs.length;
       secs.forEach(function (sec, i) {
         byNum[sec] = {
@@ -266,6 +274,23 @@
       .sort(function (a, b) { return a.number - b.number; });
   }
 
+  async function chooseCampus(raw) {
+    const seen = {};
+    const list = [];
+    ((raw && raw.data) || []).forEach(function (x) {
+      const id = x.kbjcmsid;
+      if (!id || seen[id]) return;
+      seen[id] = true;
+      const name = String(x.kbjcmc || x.kbjcmsmc || x.kbjcsmc || x.name || x.kbjcmsid);
+      list.push({ id: id, name: name });
+    });
+    if (!list.length) throw new Error('没有可用的校区课表');
+    if (list.length === 1) return list[0];
+    const idx = await pick('选择校区', list.map(function (x) { return x.name; }), 0);
+    if (idx === null || idx === undefined || idx < 0) return null;
+    return list[Number(idx)] || null;
+  }
+
   async function runImportFlow() {
     const go = await alertBox('课表导入', '将读取所选学期的整学期课表并导入，是否继续？', '开始导入');
     if (go === false) { await toast('已取消，未导入'); return; }
@@ -275,9 +300,8 @@
     if (!sem) { await toast('已取消，未导入'); return; }
 
     const campusesRaw = await api('/njwhd/Get_sjkbms');
-    const campuses = ((campusesRaw && campusesRaw.data) || [])
-      .map(function (x) { return x.kbjcmsid; }).filter(Boolean);
-    if (!campuses.length) throw new Error('没有可用的校区课表');
+    const campus = await chooseCampus(campusesRaw);
+    if (!campus) { await toast('已取消，未导入'); return; }
 
     let totalWeeks = 20;
     let weeksKnown = false;
@@ -288,13 +312,11 @@
     } catch (_) { }
 
     const tasks = [];
-    campuses.forEach(function (cb) {
-      for (let w = 1; w <= totalWeeks; w++) {
-        tasks.push(api('/njwhd/student/curriculum', { xnxq01id: sem.value, kbjcmsid: cb, week: String(w) })
-          .then(function (json) { return { week: w, campus: cb, json: json }; })
-          .catch(function () { return null; }));
-      }
-    });
+    for (let w = 1; w <= totalWeeks; w++) {
+      tasks.push(api('/njwhd/student/curriculum', { xnxq01id: sem.value, kbjcmsid: campus.id, week: String(w) })
+        .then(function (json) { return { week: w, campus: campus.id, json: json }; })
+        .catch(function () { return null; }));
+    }
     const settled = await Promise.all(tasks);
     const responses = settled.filter(Boolean).filter(function (r) { return r.json && Array.isArray(r.json.data); });
     if (!responses.length) throw new Error('没有取到任何课表数据');
