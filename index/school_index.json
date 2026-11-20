@@ -1,6 +1,6 @@
 {
   "protocol_version": 1,
-  "version_id": "2026-11-20T03:02:04Z",
+  "version_id": "2026-11-20T16:06:09Z",
   "schools": [
     {
       "id": "DLGC",
@@ -158,6 +158,22 @@
           "asset_js_path": "resources/HNMY/hnmy.js",
           "import_url": "https://hnuahe.jw.chaoxing.com/admin",
           "description": "超星教务课表适配。登录教务系统后直接点导入即可，不需要手动进入课表页；脚本会读取学年学期列表、整学期课表与作息。可切换学年学期，导入前会二次确认。",
+          "maintainer": "Nexio课程表"
+        }
+      ]
+    },
+    {
+      "id": "WTBU",
+      "name": "武汉工商学院",
+      "initial": "W",
+      "adapters": [
+        {
+          "adapter_id": "WTBU_01",
+          "adapter_name": "武汉工商学院WTBU",
+          "category": 2,
+          "asset_js_path": "resources/WTBU/wtbu.js",
+          "import_url": "https://portal.wtbu.edu.cn/",
+          "description": "正方 EAMS 教务课表适配。登录教务系统后直接点导入即可，不需要手动进入课表页；脚本会读取学年学期、整学期课表，并尽力读取页面中的作息时间。可切换学年学期，导入前会二次确认。",
           "maintainer": "Nexio课程表"
         }
       ]
