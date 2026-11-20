@@ -1,0 +1,11 @@
+# resources/XJAVTU/adapters.yaml
+# 新疆农业职业技术大学（jxgl.xjavtu.edu.cn，正方教务 V9）
+
+adapters:
+  - adapter_id: "XJAVTU_01"
+    adapter_name: "新疆农业职业技术大学XJAVTU"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "xjavtu.js"
+    import_url: "https://yzfw.xjavtu.edu.cn/cas/login?service=https%3A%2F%2Fjxgl.xjavtu.edu.cn%3A443%2Fsso%2Fzcycloginc"
+    maintainer: "Nexio课程表"
+    description: "正方教务系统课表适配。通过统一身份认证登录进入教务系统后直接点击导入即可，不需要手动进入课表页；脚本会自动读取学年学期、整学期课表、校历与作息。"
