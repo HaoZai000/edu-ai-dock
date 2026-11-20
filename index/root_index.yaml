@@ -41,6 +41,10 @@ schools:
     name: "河南理工大学"
     initial: "H"
 
+  - id: "HNMY"
+    name: "河南牧业经济学院"
+    initial: "H"
+
   - id: "XUPT"
     name: "西安邮电大学"
     initial: "X"

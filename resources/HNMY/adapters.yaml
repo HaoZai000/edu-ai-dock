@@ -1,0 +1,8 @@
+adapters:
+  - adapter_id: "HNMY_01"
+    adapter_name: "河南牧业经济学院HNMY"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "hnmy.js"
+    import_url: "https://hnuahe.jw.chaoxing.com/admin"
+    maintainer: "Nexio课程表"
+    description: "超星教务课表适配。登录教务系统后直接点导入即可，不需要手动进入课表页；脚本会读取学年学期列表、整学期课表与作息。可切换学年学期，导入前会二次确认。"
