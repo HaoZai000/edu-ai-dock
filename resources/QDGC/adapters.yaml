@@ -1,0 +1,8 @@
+adapters:
+  - adapter_id: "QDGC_01"
+    adapter_name: "青岛工程职业学院QDGC"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "qdgc.js"
+    import_url: "http://wxjw.qdec.edu.cn:8001/sjd/#/new/Home"
+    maintainer: "Nexio课程表"
+    description: "教务系统课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会读取教学周并逐周拉取整学期课表，合并去重，课程使用接口返回的真实起止时间。导入前会二次确认。"
