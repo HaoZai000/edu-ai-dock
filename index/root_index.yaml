@@ -53,6 +53,10 @@ schools:
     name: "西南大学"
     initial: "X"
 
+  - id: "XJAVTU"
+    name: "新疆农业职业技术大学"
+    initial: "X"
+
   - id: "XAUAT"
     name: "西安建筑科技大学"
     initial: "X"
