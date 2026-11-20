@@ -29,40 +29,21 @@
     } catch (e) {}
   }
 
-  function clock(s) {
-    const m = String(s || '').match(/^(\d{1,2}):(\d{2})$/);
-    return m ? m[1].padStart(2, '0') + ':' + m[2] : null;
-  }
-
-  function parseSlots(html, unitCount) {
-    const map = new Map();
-    const push = function (n, st, et) {
-      const a = clock(st), b = clock(et);
-      if (n >= 1 && n <= 30 && a && b && a < b && !map.has(n)) {
-        map.set(n, { number: n, startTime: a, endTime: b });
-      }
-    };
-
-    const arrM = html.match(/var\s+(?:unitTime|unitTimes|timeArray|times)\s*=\s*(\[[\s\S]*?\])\s*;/);
-    if (arrM) {
-      try {
-        const arr = JSON.parse(arrM[1].replace(/'/g, '"'));
-        arr.forEach(function (v, i) {
-          const m = String(v).match(/(\d{1,2}:\d{2})\s*[-~至]\s*(\d{1,2}:\d{2})/);
-          if (m) push(i + 1, m[1], m[2]);
-        });
-      } catch (e) {}
-    }
-
-    const re = /第\s*(\d+)\s*节[\s\S]{0,160}?(\d{1,2}:\d{2})[\s\S]{0,80}?(\d{1,2}:\d{2})/g;
-    let m;
-    while ((m = re.exec(html))) push(parseInt(m[1], 10), m[2], m[3]);
-
-    const list = Array.from(map.values()).sort(function (a, b) { return a.number - b.number; });
-    if (!list.length) return [];
-    if (unitCount && list.length < Math.min(unitCount, 6)) return [];
-    return list;
-  }
+  const SLOTS = [
+    { number: 1, startTime: '08:20', endTime: '09:05' },
+    { number: 2, startTime: '09:15', endTime: '10:00' },
+    { number: 3, startTime: '10:20', endTime: '11:05' },
+    { number: 4, startTime: '11:15', endTime: '12:00' },
+    { number: 5, startTime: '12:10', endTime: '12:55' },
+    { number: 6, startTime: '13:05', endTime: '13:50' },
+    { number: 7, startTime: '14:10', endTime: '14:55' },
+    { number: 8, startTime: '15:05', endTime: '15:50' },
+    { number: 9, startTime: '16:10', endTime: '16:55' },
+    { number: 10, startTime: '17:05', endTime: '17:50' },
+    { number: 11, startTime: '18:30', endTime: '19:15' },
+    { number: 12, startTime: '19:25', endTime: '20:10' },
+    { number: 13, startTime: '20:20', endTime: '21:05' }
+  ];
 
   function parseTimeTable(html) {
     const ucM = html.match(/var\s+unitCount\s*=\s*(\d+)/);
@@ -286,7 +267,7 @@
     const norm = normalizeCourses(parsed.raw);
     if (!norm.courses.length) throw new Error('课表里没有解析到任何课程');
 
-    const slots = parseSlots(page, parsed.unitCount);
+    const slots = SLOTS;
 
     const confirmed = await uiAlert(
       '确认导入',
