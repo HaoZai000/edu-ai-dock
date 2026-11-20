@@ -1,0 +1,10 @@
+# 大连工程学院（jw.dlutci.edu.cn，金智 jwapp 教务）
+
+adapters:
+  - adapter_id: "DLGC_01"
+    adapter_name: "大连工程学院DLGC"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "dlgc.js"
+    import_url: "https://jw.dlutci.edu.cn"
+    maintainer: "Nexio课程表"
+    description: "金智教务课表适配。登录教务系统后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期、整学期课表、校历与作息。若当前页面不是教务系统页面，请先打开一次。"
