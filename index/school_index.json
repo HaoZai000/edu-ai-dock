@@ -1,6 +1,6 @@
 {
   "protocol_version": 1,
-  "version_id": "2026-11-20T16:06:09Z",
+  "version_id": "2026-11-20T16:20:57Z",
   "schools": [
     {
       "id": "DLGC",
@@ -158,6 +158,22 @@
           "asset_js_path": "resources/HNMY/hnmy.js",
           "import_url": "https://hnuahe.jw.chaoxing.com/admin",
           "description": "超星教务课表适配。登录教务系统后直接点导入即可，不需要手动进入课表页；脚本会读取学年学期列表、整学期课表与作息。可切换学年学期，导入前会二次确认。",
+          "maintainer": "Nexio课程表"
+        }
+      ]
+    },
+    {
+      "id": "HNXXTJ",
+      "name": "河南信息统计职业学院",
+      "initial": "H",
+      "adapters": [
+        {
+          "adapter_id": "HNXXTJ_01",
+          "adapter_name": "河南信息统计职业学院HNXXTJ",
+          "category": 2,
+          "asset_js_path": "resources/HNXXTJ/hnxxtj.js",
+          "import_url": "https://sfrz.ywhnty.com/cas/login?service=http%3A%2F%2Fqgjw.ywhnty.com%2Fcaslogin",
+          "description": "教务系统课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会读取学年学期和整学期课表，列表接口失败时自动改用二维表接口。作息未包含，使用默认时间。",
           "maintainer": "Nexio课程表"
         }
       ]
