@@ -1,6 +1,6 @@
 {
   "protocol_version": 1,
-  "version_id": "2026-11-20T02:44:46Z",
+  "version_id": "2026-11-20T03:02:04Z",
   "schools": [
     {
       "id": "DLGC",
@@ -142,6 +142,22 @@
           "asset_js_path": "resources/HPU/hpu.js",
           "import_url": "https://zhlg.hpu.edu.cn/",
           "description": "正方 eams 教务课表适配。登录教务系统后直接点导入即可，不需要手动进入课表页；脚本会自动读取学期、整学期课表与作息。",
+          "maintainer": "Nexio课程表"
+        }
+      ]
+    },
+    {
+      "id": "HNMY",
+      "name": "河南牧业经济学院",
+      "initial": "H",
+      "adapters": [
+        {
+          "adapter_id": "HNMY_01",
+          "adapter_name": "河南牧业经济学院HNMY",
+          "category": 2,
+          "asset_js_path": "resources/HNMY/hnmy.js",
+          "import_url": "https://hnuahe.jw.chaoxing.com/admin",
+          "description": "超星教务课表适配。登录教务系统后直接点导入即可，不需要手动进入课表页；脚本会读取学年学期列表、整学期课表与作息。可切换学年学期，导入前会二次确认。",
           "maintainer": "Nexio课程表"
         }
       ]
