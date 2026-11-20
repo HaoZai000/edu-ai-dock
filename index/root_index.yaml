@@ -45,6 +45,10 @@ schools:
     name: "河南牧业经济学院"
     initial: "H"
 
+  - id: "HNXXTJ"
+    name: "河南信息统计职业学院"
+    initial: "H"
+
   - id: "WTBU"
     name: "武汉工商学院"
     initial: "W"
