@@ -1,6 +1,6 @@
 {
   "protocol_version": 1,
-  "version_id": "2026-11-20T02:21:51Z",
+  "version_id": "2026-11-20T02:27:50Z",
   "schools": [
     {
       "id": "DLNU",
@@ -13,7 +13,7 @@
           "category": 2,
           "asset_js_path": "resources/DLNU/dlnu.js",
           "import_url": "http://jwyd.dlnu.edu.cn/sjd/#/login",
-          "description": "定制 SPA 教务课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期、整学期课表与作息。",
+          "description": "定制 SPA 教务课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期、整学期课表与作息。多校区时先选择校区。",
           "maintainer": "Nexio课程表"
         }
       ]
