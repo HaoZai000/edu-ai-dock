@@ -1,6 +1,6 @@
 {
   "protocol_version": 1,
-  "version_id": "2026-11-20T16:20:57Z",
+  "version_id": "2026-11-20T16:22:49Z",
   "schools": [
     {
       "id": "DLGC",
@@ -239,6 +239,22 @@
           "import_url": "https://swjw.xauat.edu.cn/student/login/",
           "description": "适用于本科。登录统一身份认证并进入教务系统后，点击导入并选择学期。部分实验课同时安排多个教室，请在导入后按实际情况核对。",
           "maintainer": "pu-007"
+        }
+      ]
+    },
+    {
+      "id": "YNMEC",
+      "name": "云南机电职业技术学院",
+      "initial": "Y",
+      "adapters": [
+        {
+          "adapter_id": "YNMEC_01",
+          "adapter_name": "云南机电职业技术学院YNMEC",
+          "category": 2,
+          "asset_js_path": "resources/YNMEC/ynmec.js",
+          "import_url": "https://cas.ynmec.edu.cn/lyuapServer/login?service=https%3A%2F%2Fjwxt.ynmec.edu.cn%2Fjwapp%2Fsys%2Fkbapp%2F*default%2Findex.do%3FTHEME%3Dindigo%26THEME_VARIABLES%3D%26RADIUS%3D20%26EMAP_LANG%3Dzh%26forceApp%3Dkbapp",
+          "description": "金智教务课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会读取学年学期、校区、校历周数、节次作息与整学期课表。支持学期和校区选择，导入前会二次确认。",
+          "maintainer": "Nexio课程表"
         }
       ]
     },
