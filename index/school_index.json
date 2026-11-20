@@ -1,6 +1,6 @@
 {
   "protocol_version": 1,
-  "version_id": "2026-11-20T16:27:15Z",
+  "version_id": "2026-11-20T16:32:04Z",
   "schools": [
     {
       "id": "DLGC",
@@ -190,6 +190,22 @@
           "asset_js_path": "resources/JMPT/jmpt.js",
           "import_url": "http://10.4.2.11:8181/JmptJwxt/ZzUsrLogin",
           "description": "教务系统课表适配，仅校园网可访问。登录后直接点导入即可，不需要手动进入课表页；脚本会读取当前学期整学期课表页面，解析课程、周次（含单双周）与 12 节作息。导入前会二次确认。",
+          "maintainer": "Nexio课程表"
+        }
+      ]
+    },
+    {
+      "id": "QDGC",
+      "name": "青岛工程职业学院",
+      "initial": "Q",
+      "adapters": [
+        {
+          "adapter_id": "QDGC_01",
+          "adapter_name": "青岛工程职业学院QDGC",
+          "category": 2,
+          "asset_js_path": "resources/QDGC/qdgc.js",
+          "import_url": "http://wxjw.qdec.edu.cn:8001/sjd/#/new/Home",
+          "description": "教务系统课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会读取教学周并逐周拉取整学期课表，合并去重，课程使用接口返回的真实起止时间。导入前会二次确认。",
           "maintainer": "Nexio课程表"
         }
       ]
