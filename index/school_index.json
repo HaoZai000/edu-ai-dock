@@ -1,6 +1,6 @@
 {
   "protocol_version": 1,
-  "version_id": "2026-11-22T01:40:26Z",
+  "version_id": "2026-11-22T01:42:59Z",
   "schools": [
     {
       "id": "CZJTU",
@@ -110,6 +110,22 @@
           "asset_js_path": "resources/GDYSYY/gdysyy.js",
           "import_url": "http://218.15.231.30:8095/jwglxt/xtgl/login_slogin.html",
           "description": "正方教务 V9 接口适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期、整学期课表与作息。",
+          "maintainer": "Nexio课程表"
+        }
+      ]
+    },
+    {
+      "id": "GUPT",
+      "name": "广东邮电职业技术学院",
+      "initial": "G",
+      "adapters": [
+        {
+          "adapter_id": "GUPT_01",
+          "adapter_name": "广东邮电职业技术学院GUPT",
+          "category": 2,
+          "asset_js_path": "resources/GUPT/gupt.js",
+          "import_url": "https://www.gupt.edu.cn/jwglxt/xtgl/index_initMenu.html?jsdm=xs",
+          "description": "正方教务课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会选择学年学期，读取整学期课表与 11 节作息，支持单双周并合并连堂。导入前会二次确认。",
           "maintainer": "Nexio课程表"
         }
       ]
