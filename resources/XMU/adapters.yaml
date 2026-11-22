@@ -1,0 +1,8 @@
+adapters:
+  - adapter_id: "XMU_01"
+    adapter_name: "厦门大学XMU"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "xmu.js"
+    import_url: "https://jw.xmu.edu.cn/new/index.html"
+    maintainer: "Nexio课程表"
+    description: "金智教务课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会读取学年学期、整学期排课结果与作息，按星期日为首列转换星期，展开周次并合并节次。导入前会二次确认。"

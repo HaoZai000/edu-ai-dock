@@ -85,6 +85,10 @@ schools:
     name: "西安建筑科技大学"
     initial: "X"
 
+  - id: "XMU"
+    name: "厦门大学"
+    initial: "X"
+
   - id: "YNMEC"
     name: "云南机电职业技术学院"
     initial: "Y"
