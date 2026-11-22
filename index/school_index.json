@@ -1,6 +1,6 @@
 {
   "protocol_version": 1,
-  "version_id": "2026-11-22T01:34:18Z",
+  "version_id": "2026-11-22T01:36:18Z",
   "schools": [
     {
       "id": "CZJTU",
@@ -319,6 +319,22 @@
           "import_url": "https://swjw.xauat.edu.cn/student/login/",
           "description": "适用于本科。登录统一身份认证并进入教务系统后，点击导入并选择学期。部分实验课同时安排多个教室，请在导入后按实际情况核对。",
           "maintainer": "pu-007"
+        }
+      ]
+    },
+    {
+      "id": "XMU",
+      "name": "厦门大学",
+      "initial": "X",
+      "adapters": [
+        {
+          "adapter_id": "XMU_01",
+          "adapter_name": "厦门大学XMU",
+          "category": 2,
+          "asset_js_path": "resources/XMU/xmu.js",
+          "import_url": "https://jw.xmu.edu.cn/new/index.html",
+          "description": "金智教务课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会读取学年学期、整学期排课结果与作息，按星期日为首列转换星期，展开周次并合并节次。导入前会二次确认。",
+          "maintainer": "Nexio课程表"
         }
       ]
     },
