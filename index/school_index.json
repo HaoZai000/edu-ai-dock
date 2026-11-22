@@ -1,6 +1,6 @@
 {
   "protocol_version": 1,
-  "version_id": "2026-11-22T01:42:59Z",
+  "version_id": "2026-11-22T01:44:50Z",
   "schools": [
     {
       "id": "CZJTU",
@@ -254,6 +254,22 @@
           "asset_js_path": "resources/QDGC/qdgc.js",
           "import_url": "http://wxjw.qdec.edu.cn:8001/sjd/#/new/Home",
           "description": "教务系统课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会读取教学周并逐周拉取整学期课表，合并去重，课程使用接口返回的真实起止时间。导入前会二次确认。",
+          "maintainer": "Nexio课程表"
+        }
+      ]
+    },
+    {
+      "id": "QZTC",
+      "name": "泉州师范学院",
+      "initial": "Q",
+      "adapters": [
+        {
+          "adapter_id": "QZTC_01",
+          "adapter_name": "泉州师范学院QZTC",
+          "category": 2,
+          "asset_js_path": "resources/QZTC/qztc.js",
+          "import_url": "https://jw.qztc.edu.cn",
+          "description": "教务课表适配。需要先在教务系统打开「学生课表 / 我的课表」并选好学期，再点导入；脚本读取当前课表页，解析课程、教师、教室、周次和节次时间。导入前会二次确认。",
           "maintainer": "Nexio课程表"
         }
       ]
