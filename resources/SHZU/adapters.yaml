@@ -1,0 +1,8 @@
+adapters:
+  - adapter_id: "SHZU_01"
+    adapter_name: "石河子大学SHZU"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "shzu.js"
+    import_url: "https://jwgl.shzu.edu.cn"
+    maintainer: "Nexio课程表"
+    description: "青果教务课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会切换学期、读取整学期课表与作息，支持单双周。导入前会二次确认。"

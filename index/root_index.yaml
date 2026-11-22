@@ -57,6 +57,10 @@ schools:
     name: "青岛工程职业学院"
     initial: "Q"
 
+  - id: "SHZU"
+    name: "石河子大学"
+    initial: "S"
+
   - id: "WTBU"
     name: "武汉工商学院"
     initial: "W"
