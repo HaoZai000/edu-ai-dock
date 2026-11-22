@@ -1,0 +1,8 @@
+adapters:
+  - adapter_id: "GUPT_01"
+    adapter_name: "广东邮电职业技术学院GUPT"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "gupt.js"
+    import_url: "https://www.gupt.edu.cn/jwglxt/xtgl/index_initMenu.html?jsdm=xs"
+    maintainer: "Nexio课程表"
+    description: "正方教务课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会选择学年学期，读取整学期课表与 11 节作息，支持单双周并合并连堂。导入前会二次确认。"
