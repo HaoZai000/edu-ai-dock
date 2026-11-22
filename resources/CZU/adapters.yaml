@@ -1,0 +1,8 @@
+adapters:
+  - adapter_id: "CZU_01"
+    adapter_name: "常州大学CZU"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "czu.js"
+    import_url: "https://cczu.edu.cn"
+    maintainer: "Nexio课程表"
+    description: "正方教务课表适配。需要先登录 WebVPN 并进入教务「学分制选课课表」页面后再点导入；脚本会基于当前代理路径读取整学期课表，选择学期、展开周次并合并节次，使用学校 12 节作息。导入前会二次确认。"

@@ -9,6 +9,10 @@ schools:
     name: "沧州交通学院"
     initial: "C"
 
+  - id: "CZU"
+    name: "常州大学"
+    initial: "C"
+
   - id: "DLGC"
     name: "大连工程学院"
     initial: "D"
