@@ -5,6 +5,10 @@
 # 新增学校：复制 resources/_template 改名成学校缩写，然后在这里登记一行。
 
 schools:
+  - id: "CZJTU"
+    name: "沧州交通学院"
+    initial: "C"
+
   - id: "DLGC"
     name: "大连工程学院"
     initial: "D"
