@@ -1,7 +1,23 @@
 {
   "protocol_version": 1,
-  "version_id": "2026-11-22T01:30:21Z",
+  "version_id": "2026-11-22T01:32:03Z",
   "schools": [
+    {
+      "id": "CZJTU",
+      "name": "沧州交通学院",
+      "initial": "C",
+      "adapters": [
+        {
+          "adapter_id": "CZJTU_01",
+          "adapter_name": "沧州交通学院CZJTU",
+          "category": 2,
+          "asset_js_path": "resources/CZJTU/czjtu.js",
+          "import_url": "https://jw.vpn.czjtu.edu.cn/xtgl/index_initMenu.html?jsdm=xs",
+          "description": "正方教务课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会选择学年学期，读取整学期课表与作息，支持单双周。导入前会二次确认。",
+          "maintainer": "Nexio课程表"
+        }
+      ]
+    },
     {
       "id": "DLGC",
       "name": "大连工程学院",
