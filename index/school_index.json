@@ -1,6 +1,6 @@
 {
   "protocol_version": 1,
-  "version_id": "2026-11-20T16:32:04Z",
+  "version_id": "2026-11-22T01:30:21Z",
   "schools": [
     {
       "id": "DLGC",
@@ -206,6 +206,22 @@
           "asset_js_path": "resources/QDGC/qdgc.js",
           "import_url": "http://wxjw.qdec.edu.cn:8001/sjd/#/new/Home",
           "description": "教务系统课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会读取教学周并逐周拉取整学期课表，合并去重，课程使用接口返回的真实起止时间。导入前会二次确认。",
+          "maintainer": "Nexio课程表"
+        }
+      ]
+    },
+    {
+      "id": "SHZU",
+      "name": "石河子大学",
+      "initial": "S",
+      "adapters": [
+        {
+          "adapter_id": "SHZU_01",
+          "adapter_name": "石河子大学SHZU",
+          "category": 2,
+          "asset_js_path": "resources/SHZU/shzu.js",
+          "import_url": "https://jwgl.shzu.edu.cn",
+          "description": "青果教务课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会切换学期、读取整学期课表与作息，支持单双周。导入前会二次确认。",
           "maintainer": "Nexio课程表"
         }
       ]
