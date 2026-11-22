@@ -1,0 +1,8 @@
+adapters:
+  - adapter_id: "QZTC_01"
+    adapter_name: "泉州师范学院QZTC"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "qztc.js"
+    import_url: "https://jw.qztc.edu.cn"
+    maintainer: "Nexio课程表"
+    description: "教务课表适配。需要先在教务系统打开「学生课表 / 我的课表」并选好学期，再点导入；脚本读取当前课表页，解析课程、教师、教室、周次和节次时间。导入前会二次确认。"

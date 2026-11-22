@@ -69,6 +69,10 @@ schools:
     name: "青岛工程职业学院"
     initial: "Q"
 
+  - id: "QZTC"
+    name: "泉州师范学院"
+    initial: "Q"
+
   - id: "SHZU"
     name: "石河子大学"
     initial: "S"
