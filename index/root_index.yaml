@@ -13,6 +13,14 @@ schools:
     name: "常州大学"
     initial: "C"
 
+  - id: "CDXY"
+    name: "常德学院"
+    initial: "C"
+
+  - id: "CSMU"
+    name: "长沙医学院"
+    initial: "C"
+
   - id: "DLGC"
     name: "大连工程学院"
     initial: "D"
@@ -37,12 +45,24 @@ schools:
     name: "广东邮电职业技术学院"
     initial: "G"
 
+  - id: "GDIPU"
+    name: "广东轻工职业技术大学"
+    initial: "G"
+
+  - id: "GXVNU"
+    name: "广西职业师范学院"
+    initial: "G"
+
   - id: "HUWAI"
     name: "湖南外国语职业学院"
     initial: "H"
 
   - id: "HBUE"
     name: "湖北第二师范学院"
+    initial: "H"
+
+  - id: "HBPU"
+    name: "湖北理工学院"
     initial: "H"
 
   - id: "HNKJZY"
@@ -65,6 +85,10 @@ schools:
     name: "江门职业技术学院"
     initial: "J"
 
+  - id: "JXLSXY"
+    name: "江西旅游商贸职业学院"
+    initial: "J"
+
   - id: "QDGC"
     name: "青岛工程职业学院"
     initial: "Q"
@@ -73,12 +97,24 @@ schools:
     name: "泉州师范学院"
     initial: "Q"
 
+  - id: "SCITC"
+    name: "四川信息职业技术学院"
+    initial: "S"
+
   - id: "SHZU"
     name: "石河子大学"
     initial: "S"
 
+  - id: "TJRA"
+    name: "天津仁爱学院"
+    initial: "T"
+
   - id: "WTBU"
     name: "武汉工商学院"
+    initial: "W"
+
+  - id: "WHIT"
+    name: "芜湖职业技术大学"
     initial: "W"
 
   - id: "XUPT"

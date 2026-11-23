@@ -1,0 +1,10 @@
+# 江西旅游商贸职业学院（home.jxlsxy.edu.cn，无网络限制）
+
+adapters:
+  - adapter_id: "JXLSXY_01"
+    adapter_name: "江西旅游商贸职业学院JXLSXY"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "jxlsxy.js"
+    import_url: "https://home.jxlsxy.edu.cn/StudentMobileOA/#/home"
+    maintainer: "Nexio课程表"
+    description: "教务课表适配。登录学校信息门户后直接点导入即可，不需要手动进入课表页；脚本会自动读取学期列表、逐周抓取整学期课表并写入作息。"

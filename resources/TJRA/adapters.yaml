@@ -1,0 +1,10 @@
+# 天津仁爱学院（jwgl.tjrac.edu.cn，无网络限制）
+
+adapters:
+  - adapter_id: "TJRA_01"
+    adapter_name: "天津仁爱学院TJRA"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "tjra.js"
+    import_url: "http://jwgl.tjrac.edu.cn/xtgl/login_slogin.html"
+    maintainer: "Nexio课程表"
+    description: "正方教务课表适配。登录教务系统后直接点导入即可；脚本会让用户选择学年学期，解析整学期课表并读取节次作息。"

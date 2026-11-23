@@ -1,0 +1,10 @@
+# 广东轻工职业技术大学（jw.gdipu.edu.cn，无网络限制）
+
+adapters:
+  - adapter_id: "GDIPU_01"
+    adapter_name: "广东轻工职业技术大学GDIPU"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "gdipu.js"
+    import_url: "https://jw.gdipu.edu.cn"
+    maintainer: "Nexio课程表"
+    description: "青果教务课表适配。需要先在教务系统打开「学期理论课表」页面，再点导入；脚本会让用户选择学期，解析整学期课表、教师、教室、周次与节次作息。"

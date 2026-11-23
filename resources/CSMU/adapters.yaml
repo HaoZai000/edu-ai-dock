@@ -1,0 +1,10 @@
+# 长沙医学院（oa.csmu.edu.cn:8099，无网络限制）
+
+adapters:
+  - adapter_id: "CSMU_01"
+    adapter_name: "长沙医学院CSMU"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "csmu.js"
+    import_url: "http://oa.csmu.edu.cn:8099/jsxsd"
+    maintainer: "Nexio课程表"
+    description: "青果教务课表适配。登录教务系统后直接点导入即可；脚本会让用户选择学年学期，解析整学期课表并写入作息。"

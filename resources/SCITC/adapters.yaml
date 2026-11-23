@@ -1,0 +1,10 @@
+# 四川信息职业技术学院（zhcx.scitc.edu.cn，无网络限制）
+
+adapters:
+  - adapter_id: "SCITC_01"
+    adapter_name: "四川信息职业技术学院SCITC"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "scitc.js"
+    import_url: "https://zhcx.scitc.edu.cn/"
+    maintainer: "Nexio课程表"
+    description: "教务课表适配。登录信息门户后直接点导入即可；脚本会读取课表页的学年学期并解析整学期课表与作息。"

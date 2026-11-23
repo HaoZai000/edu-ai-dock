@@ -1,0 +1,10 @@
+# 湖北理工学院（jwglnew.hbpu.edu.cn，无网络限制）
+
+adapters:
+  - adapter_id: "HBPU_01"
+    adapter_name: "湖北理工学院HBPU"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "hbpu.js"
+    import_url: "https://jwglnew.hbpu.edu.cn"
+    maintainer: "Nexio课程表"
+    description: "正方教务课表适配。登录教务系统后直接点导入即可；脚本会读取学年学期下拉、整学期课表与节次作息，并保留教师和上课地点。"

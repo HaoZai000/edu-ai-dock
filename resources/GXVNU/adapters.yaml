@@ -1,0 +1,10 @@
+# 广西职业师范学院（jw.gxvnu.edu.cn，无网络限制）
+
+adapters:
+  - adapter_id: "GXVNU_01"
+    adapter_name: "广西职业师范学院GXVNU"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "gxvnu.js"
+    import_url: "https://jw.gxvnu.edu.cn/jwglxt/xtgl/login_slogin.html"
+    maintainer: "Nexio课程表"
+    description: "正方教务课表适配。登录教务系统后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期、整学期课表与作息，并去除地点中的校区字样。"

@@ -1,0 +1,10 @@
+# 常德学院（172.16.12.13，仅校园网可访问）
+
+adapters:
+  - adapter_id: "CDXY_01"
+    adapter_name: "常德学院CDXY"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "cdxy.js"
+    import_url: "http://172.16.12.13/jwglxt/"
+    maintainer: "Nexio课程表"
+    description: "正方教务课表适配。需要先打开「课表查询」页面再点导入；脚本会自动读取学年学期、整学期课表与节次作息。仅校园网可访问。"

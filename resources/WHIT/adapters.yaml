@@ -1,0 +1,10 @@
+# 芜湖职业技术大学（jwxt.whit.edu.cn，无网络限制）
+
+adapters:
+  - adapter_id: "WHIT_01"
+    adapter_name: "芜湖职业技术大学WHIT"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "whit.js"
+    import_url: "https://jwxt.whit.edu.cn/jwgl/jsp/app/xlogin.jsp"
+    maintainer: "Nexio课程表"
+    description: "教务课表适配。登录教务系统后直接点导入即可；脚本会自动获取学号、选择学期，并读取整学期课表与节次作息。"
