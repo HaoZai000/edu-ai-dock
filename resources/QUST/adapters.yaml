@@ -1,0 +1,10 @@
+# 青岛科技大学（bsdt.qust.edu.cn，校外需 WebVPN）
+
+adapters:
+  - adapter_id: "QUST_01"
+    adapter_name: "青岛科技大学QUST"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "qust.js"
+    import_url: "https://bsdt.qust.edu.cn/personal-center"
+    maintainer: "Nexio课程表"
+    description: "bsdt 教务课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本按学期日期区间读取整学期课程，并写入学校固定 10 节作息。校外访问需先登录学校 WebVPN。"

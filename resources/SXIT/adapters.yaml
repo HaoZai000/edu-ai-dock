@@ -1,0 +1,10 @@
+# 山西工学院（172.16.46.67:1000，正方 jwglxt，仅校园网）
+
+adapters:
+  - adapter_id: "SXIT_01"
+    adapter_name: "山西工学院SXIT"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "sxit.js"
+    import_url: "http://172.16.46.67:1000/jwglxt/xtgl/login_slogin.html"
+    maintainer: "Nexio课程表"
+    description: "正方教务系统课表适配，仅校园网可访问。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年、学期、整学期课表、作息与节次时长。"

@@ -1,0 +1,10 @@
+# 西安培华学院（kj.peihua.cn，正方 jwglxt 班级课表）
+
+adapters:
+  - adapter_id: "XAPH_01"
+    adapter_name: "西安培华学院XAPH"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "xaph.js"
+    import_url: "http://kj.peihua.cn/jwglxt/xtgl/login_slogin.html"
+    maintainer: "Nexio课程表"
+    description: "正方教务系统课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期、班级课表、作息与教学周数。"

@@ -1,0 +1,10 @@
+# 青岛工学院（jw.qit.edu.cn，正方 jwglxt）
+
+adapters:
+  - adapter_id: "QIT_01"
+    adapter_name: "青岛工学院QIT"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "qit.js"
+    import_url: "http://jw.qit.edu.cn/jwglxt/xtgl/login_slogin.html"
+    maintainer: "Nexio课程表"
+    description: "正方教务系统课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年、学期、整学期课表与作息。"

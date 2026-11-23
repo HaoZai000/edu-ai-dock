@@ -1,0 +1,10 @@
+# 武夷学院（sso.wuyiu.edu.cn / jwxt.wuyiu.edu.cn，金智 jsxsd）
+
+adapters:
+  - adapter_id: "WUYI_01"
+    adapter_name: "武夷学院WUYI"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "wuyi.js"
+    import_url: "https://sso.wuyiu.edu.cn/login?service=https%3A%2F%2Fjwxt.wuyiu.edu.cn%2Fjsxsd%2F"
+    maintainer: "Nexio课程表"
+    description: "金智 jsxsd 教务课表适配。通过统一认证登录并进入教务后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期、整学期课表、作息与校历。"

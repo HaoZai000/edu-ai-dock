@@ -81,6 +81,18 @@ schools:
     name: "河南信息统计职业学院"
     initial: "H"
 
+  - id: "HUNNU"
+    name: "湖南师范大学"
+    initial: "H"
+
+  - id: "HUBU"
+    name: "湖北大学"
+    initial: "H"
+
+  - id: "HRBHD"
+    name: "哈尔滨华德学院"
+    initial: "H"
+
   - id: "JMPT"
     name: "江门职业技术学院"
     initial: "J"
@@ -91,6 +103,14 @@ schools:
 
   - id: "QDGC"
     name: "青岛工程职业学院"
+    initial: "Q"
+
+  - id: "QIT"
+    name: "青岛工学院"
+    initial: "Q"
+
+  - id: "QUST"
+    name: "青岛科技大学"
     initial: "Q"
 
   - id: "QZTC"
@@ -105,6 +125,14 @@ schools:
     name: "石河子大学"
     initial: "S"
 
+  - id: "SXNU"
+    name: "山西师范大学"
+    initial: "S"
+
+  - id: "SXIT"
+    name: "山西工学院"
+    initial: "S"
+
   - id: "TJRA"
     name: "天津仁爱学院"
     initial: "T"
@@ -117,8 +145,20 @@ schools:
     name: "芜湖职业技术大学"
     initial: "W"
 
+  - id: "WUYI"
+    name: "武夷学院"
+    initial: "W"
+
   - id: "XUPT"
     name: "西安邮电大学"
+    initial: "X"
+
+  - id: "XAPH"
+    name: "西安培华学院"
+    initial: "X"
+
+  - id: "XAWL"
+    name: "西安文理学院"
     initial: "X"
 
   - id: "SWU"
@@ -133,9 +173,17 @@ schools:
     name: "厦门大学"
     initial: "X"
 
+  - id: "YBU"
+    name: "延边大学"
+    initial: "Y"
+
   - id: "YNMEC"
     name: "云南机电职业技术学院"
     initial: "Y"
+
+  - id: "ZYKJ"
+    name: "中原科技学院"
+    initial: "Z"
 
   - id: "ZZKJ"
     name: "郑州科技学院"

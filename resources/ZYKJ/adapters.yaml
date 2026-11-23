@@ -1,0 +1,10 @@
+# 中原科技学院（cas.zykj.edu.cn，EAMS 教务）
+
+adapters:
+  - adapter_id: "ZYKJ_01"
+    adapter_name: "中原科技学院ZYKJ"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "zykj.js"
+    import_url: "https://cas.zykj.edu.cn"
+    maintainer: "Nexio课程表"
+    description: "EAMS 教务课表适配。登录统一认证并进入教务后直接点导入即可，不需要手动进入课表页；脚本会自动读取学期、整学期课表与教学周数。"

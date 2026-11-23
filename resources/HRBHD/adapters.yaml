@@ -1,0 +1,10 @@
+# 哈尔滨华德学院（112.102.214.203:8108，正方 jwglxt）
+
+adapters:
+  - adapter_id: "HRBHD_01"
+    adapter_name: "哈尔滨华德学院HRBHD"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "hrbhd.js"
+    import_url: "http://112.102.214.203:8108/jwglxt/xtgl/login_slogin.html"
+    maintainer: "Nexio课程表"
+    description: "正方教务系统课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年、学期、整学期课表与作息。如校外无法打开，请连接校园网或学校 VPN。"

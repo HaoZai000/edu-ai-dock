@@ -1,0 +1,10 @@
+# 延边大学（jwxt.ybu.edu.cn，金智 jsxsd 教务）
+
+adapters:
+  - adapter_id: "YBU_01"
+    adapter_name: "延边大学YBU"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "ybu.js"
+    import_url: "http://jwxt.ybu.edu.cn/jsxsd/"
+    maintainer: "Nexio课程表"
+    description: "金智 jsxsd 教务课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期、整学期课表与作息。"
