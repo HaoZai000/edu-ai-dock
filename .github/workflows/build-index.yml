@@ -34,12 +34,12 @@ jobs:
 
       - name: Commit generated index
         run: |
-          if [ -z "$(git status --porcelain -- index/school_index.json)" ]; then
+          if [ -z "$(git status --porcelain -- index/school_index.json README.md)" ]; then
             echo "no changes"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index/school_index.json
+          git add index/school_index.json README.md
           git commit -m "chore: rebuild school_index.json [skip ci]"
           git push

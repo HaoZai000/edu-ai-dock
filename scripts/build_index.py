@@ -6,6 +6,7 @@
 """
 import datetime
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -14,7 +15,11 @@ import yaml
 ROOT = Path(__file__).resolve().parent.parent
 ROOT_INDEX = ROOT / "index" / "root_index.yaml"
 OUT = ROOT / "index" / "school_index.json"
+README = ROOT / "README.md"
 RESOURCES = ROOT / "resources"
+
+README_STATS_START = "<!-- AUTO_STATS_START -->"
+README_STATS_END = "<!-- AUTO_STATS_END -->"
 
 PROTOCOL_VERSION = 1
 CATEGORY = {
@@ -117,8 +122,37 @@ def build_schools():
     return schools
 
 
+def update_readme(schools):
+    """把学校/适配脚本总数写进 README 的自动统计块，内容不变时不落盘。"""
+    if not README.exists():
+        print("README.md 不存在，跳过统计更新")
+        return
+
+    text = README.read_text(encoding="utf-8")
+    pattern = re.compile(
+        re.escape(README_STATS_START) + r".*?" + re.escape(README_STATS_END),
+        re.DOTALL,
+    )
+    if not pattern.search(text):
+        print("README.md 缺少自动统计标记，跳过统计更新")
+        return
+
+    adapter_count = sum(len(school["adapters"]) for school in schools)
+    block = (
+        f"{README_STATS_START}\n"
+        f"当前共收录 **{len(schools)}** 所学校、**{adapter_count}** 个适配脚本"
+        f"（由 `scripts/build_index.py` 自动统计，请勿手改本段）。\n"
+        f"{README_STATS_END}"
+    )
+    updated = pattern.sub(lambda _: block, text, count=1)
+    if updated != text:
+        README.write_text(updated, encoding="utf-8")
+        print(f"已更新 README.md 统计：{len(schools)} 所学校 / {adapter_count} 个适配脚本")
+
+
 def main():
     schools = build_schools()
+    update_readme(schools)
 
     if OUT.exists():
         try:

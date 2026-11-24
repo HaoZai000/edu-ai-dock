@@ -7,6 +7,10 @@
 - GitHub：`https://github.com/HaoZai000/edu-ai-dock`
 - Gitee（镜像）：`https://gitee.com/com_haooz_account/edu-ai-dock`
 
+<!-- AUTO_STATS_START -->
+当前共收录 **56** 所学校、**56** 个适配脚本（由 `scripts/build_index.py` 自动统计，请勿手改本段）。
+<!-- AUTO_STATS_END -->
+
 ## 结构
 
 索引由 CI 从 YAML 生成，客户端只读生成好的 JSON，编辑时只改 YAML：
