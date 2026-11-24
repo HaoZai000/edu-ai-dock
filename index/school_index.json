@@ -1,7 +1,23 @@
 {
   "protocol_version": 1,
-  "version_id": "2026-11-23T16:07:58Z",
+  "version_id": "2026-11-24T10:46:39Z",
   "schools": [
+    {
+      "id": "AHSTU",
+      "name": "安徽科技工程大学",
+      "initial": "A",
+      "adapters": [
+        {
+          "adapter_id": "AHSTU_01",
+          "adapter_name": "安徽科技工程大学AHSTU",
+          "category": 2,
+          "asset_js_path": "resources/AHSTU/ahstu.js",
+          "import_url": "https://jwxt.ahstu.edu.cn/eams/",
+          "description": "教务系统课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期列表、整学期课程与教学周。导入前会二次确认。",
+          "maintainer": "Nexio课程表"
+        }
+      ]
+    },
     {
       "id": "CZJTU",
       "name": "沧州交通学院",
@@ -46,6 +62,22 @@
           "asset_js_path": "resources/CDXY/cdxy.js",
           "import_url": "http://172.16.12.13/jwglxt/",
           "description": "正方教务课表适配。需要先打开「课表查询」页面再点导入；脚本会自动读取学年学期、整学期课表与节次作息。仅校园网可访问。",
+          "maintainer": "Nexio课程表"
+        }
+      ]
+    },
+    {
+      "id": "CDVA",
+      "name": "成都艺术职业大学",
+      "initial": "C",
+      "adapters": [
+        {
+          "adapter_id": "CDVA_01",
+          "adapter_name": "成都艺术职业大学CDVA",
+          "category": 2,
+          "asset_js_path": "resources/CDVA/cdva.js",
+          "import_url": "https://jw.cdau.edu.cn/xtgl/login_slogin.html",
+          "description": "教务系统课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期、整学期课表与作息节次。导入前会二次确认。",
           "maintainer": "Nexio课程表"
         }
       ]
@@ -99,6 +131,22 @@
       ]
     },
     {
+      "id": "EZPC",
+      "name": "鄂州职业大学",
+      "initial": "E",
+      "adapters": [
+        {
+          "adapter_id": "EZPC_01",
+          "adapter_name": "鄂州职业大学EZPC",
+          "category": 2,
+          "asset_js_path": "resources/EZPC/ezpc.js",
+          "import_url": "https://jwxt.ezu.cn/ezzyjw/frame/homes.action",
+          "description": "教务系统课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学期列表、整学期课程与作息节次。导入前会二次确认。",
+          "maintainer": "Nexio课程表"
+        }
+      ]
+    },
+    {
       "id": "FAFU",
       "name": "福建农林大学",
       "initial": "F",
@@ -110,6 +158,22 @@
           "asset_js_path": "resources/FAFU/fafu.js",
           "import_url": "http://jwgl.fafu.edu.cn/",
           "description": "正方教务课表适配。登录教务系统后直接点导入即可，不需要手动进入「课表查询」页；脚本会自动请求课表接口并读取学年/学期。",
+          "maintainer": "Nexio课程表"
+        }
+      ]
+    },
+    {
+      "id": "FJJX",
+      "name": "福建江夏学院",
+      "initial": "F",
+      "adapters": [
+        {
+          "adapter_id": "FJJX_01",
+          "adapter_name": "福建江夏学院FJJX",
+          "category": 2,
+          "asset_js_path": "resources/FJJX/fjjx.js",
+          "import_url": "https://ehall.fjjxu.edu.cn/new/index.html",
+          "description": "教务系统课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期、整学期课表与作息节次。需在教务系统（jwglxt）页面内运行，导入前会二次确认。",
           "maintainer": "Nexio课程表"
         }
       ]
@@ -158,6 +222,22 @@
           "asset_js_path": "resources/GUPT/gupt.js",
           "import_url": "https://www.gupt.edu.cn/jwglxt/xtgl/index_initMenu.html?jsdm=xs",
           "description": "正方教务课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会选择学年学期，读取整学期课表与 11 节作息，支持单双周并合并连堂。导入前会二次确认。",
+          "maintainer": "Nexio课程表"
+        }
+      ]
+    },
+    {
+      "id": "GPNU",
+      "name": "广东技术师范大学",
+      "initial": "G",
+      "adapters": [
+        {
+          "adapter_id": "GPNU_01",
+          "adapter_name": "广东技术师范大学GPNU",
+          "category": 2,
+          "asset_js_path": "resources/GPNU/gpnu.js",
+          "import_url": "https://jwglxt.gpnu.edu.cn/sso/lyiotlogin",
+          "description": "教务课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期、整学期课程、节次作息与校历。导入前会二次确认。",
           "maintainer": "Nexio课程表"
         }
       ]
@@ -355,6 +435,54 @@
       ]
     },
     {
+      "id": "HBJG",
+      "name": "河北建筑工程学院",
+      "initial": "H",
+      "adapters": [
+        {
+          "adapter_id": "HBJG_01",
+          "adapter_name": "河北建筑工程学院HBJG",
+          "category": 2,
+          "asset_js_path": "resources/HBJG/hbjg.js",
+          "import_url": "https://jwx.hebiace.edu.cn",
+          "description": "教务课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期、整学期课程、教师、教室、周次与节次作息。导入前会二次确认。",
+          "maintainer": "Nexio课程表"
+        }
+      ]
+    },
+    {
+      "id": "HNIE",
+      "name": "湖南工程学院",
+      "initial": "H",
+      "adapters": [
+        {
+          "adapter_id": "HNIE_01",
+          "adapter_name": "湖南工程学院HNIE",
+          "category": 2,
+          "asset_js_path": "resources/HNIE/hnie.js",
+          "import_url": "https://jwcmis.hnie.edu.cn/",
+          "description": "教务课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期、整学期课程与校历周次。导入前会二次确认。",
+          "maintainer": "Nexio课程表"
+        }
+      ]
+    },
+    {
+      "id": "HZNU",
+      "name": "杭州师范大学",
+      "initial": "H",
+      "adapters": [
+        {
+          "adapter_id": "HZNU_01",
+          "adapter_name": "杭州师范大学HZNU",
+          "category": 2,
+          "asset_js_path": "resources/HZNU/hznu.js",
+          "import_url": "http://jwxt.hznu.edu.cn/jwglxt/xtgl/login_slogin.html",
+          "description": "教务系统课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期、整学期课表与作息节次。导入前会二次确认。",
+          "maintainer": "Nexio课程表"
+        }
+      ]
+    },
+    {
       "id": "JMPT",
       "name": "江门职业技术学院",
       "initial": "J",
@@ -382,6 +510,22 @@
           "asset_js_path": "resources/JXLSXY/jxlsxy.js",
           "import_url": "https://home.jxlsxy.edu.cn/StudentMobileOA/#/home",
           "description": "教务课表适配。登录学校信息门户后直接点导入即可，不需要手动进入课表页；脚本会自动读取学期列表、逐周抓取整学期课表并写入作息。",
+          "maintainer": "Nexio课程表"
+        }
+      ]
+    },
+    {
+      "id": "LNXL",
+      "name": "辽宁中医药大学杏林学院",
+      "initial": "L",
+      "adapters": [
+        {
+          "adapter_id": "LNXL_01",
+          "adapter_name": "辽宁中医药大学杏林学院LNXL",
+          "category": 2,
+          "asset_js_path": "resources/LNXL/lnxl.js",
+          "import_url": "http://59.46.67.198:60001/tmweb_xl/login.aspx",
+          "description": "教务系统课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期列表与整学期课程，切换学期后会校验是否生效。导入前会二次确认。",
           "maintainer": "Nexio课程表"
         }
       ]
@@ -574,6 +718,22 @@
           "asset_js_path": "resources/WUYI/wuyi.js",
           "import_url": "https://sso.wuyiu.edu.cn/login?service=https%3A%2F%2Fjwxt.wuyiu.edu.cn%2Fjsxsd%2F",
           "description": "金智 jsxsd 教务课表适配。通过统一认证登录并进入教务后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期、整学期课表、作息与校历。",
+          "maintainer": "Nexio课程表"
+        }
+      ]
+    },
+    {
+      "id": "WXU",
+      "name": "无锡学院",
+      "initial": "W",
+      "adapters": [
+        {
+          "adapter_id": "WXU_01",
+          "adapter_name": "无锡学院WXU",
+          "category": 2,
+          "asset_js_path": "resources/WXU/wxu.js",
+          "import_url": "https://jwgl.cwxu.edu.cn/jwglxt/xtgl/login_slogin.html",
+          "description": "教务系统课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期、整学期课表与作息节次。导入前会二次确认。",
           "maintainer": "Nexio课程表"
         }
       ]

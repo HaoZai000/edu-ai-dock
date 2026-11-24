@@ -1,0 +1,8 @@
+adapters:
+  - adapter_id: "HNIE_01"
+    adapter_name: "湖南工程学院HNIE"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "hnie.js"
+    import_url: "https://jwcmis.hnie.edu.cn/"
+    maintainer: "Nexio课程表"
+    description: "教务课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期、整学期课程与校历周次。导入前会二次确认。"

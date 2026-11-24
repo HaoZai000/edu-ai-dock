@@ -1,0 +1,10 @@
+# 辽宁中医药大学杏林学院（59.46.67.198:60001）
+
+adapters:
+  - adapter_id: "LNXL_01"
+    adapter_name: "辽宁中医药大学杏林学院LNXL"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "lnxl.js"
+    import_url: "http://59.46.67.198:60001/tmweb_xl/login.aspx"
+    maintainer: "Nexio课程表"
+    description: "教务系统课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期列表与整学期课程，切换学期后会校验是否生效。导入前会二次确认。"

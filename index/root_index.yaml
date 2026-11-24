@@ -5,6 +5,10 @@
 # 新增学校：复制 resources/_template 改名成学校缩写，然后在这里登记一行。
 
 schools:
+  - id: "AHSTU"
+    name: "安徽科技工程大学"
+    initial: "A"
+
   - id: "CZJTU"
     name: "沧州交通学院"
     initial: "C"
@@ -15,6 +19,10 @@ schools:
 
   - id: "CDXY"
     name: "常德学院"
+    initial: "C"
+
+  - id: "CDVA"
+    name: "成都艺术职业大学"
     initial: "C"
 
   - id: "CSMU"
@@ -29,8 +37,16 @@ schools:
     name: "大连民族大学"
     initial: "D"
 
+  - id: "EZPC"
+    name: "鄂州职业大学"
+    initial: "E"
+
   - id: "FAFU"
     name: "福建农林大学"
+    initial: "F"
+
+  - id: "FJJX"
+    name: "福建江夏学院"
     initial: "F"
 
   - id: "NUIT"
@@ -43,6 +59,10 @@ schools:
 
   - id: "GUPT"
     name: "广东邮电职业技术学院"
+    initial: "G"
+
+  - id: "GPNU"
+    name: "广东技术师范大学"
     initial: "G"
 
   - id: "GDIPU"
@@ -93,6 +113,18 @@ schools:
     name: "哈尔滨华德学院"
     initial: "H"
 
+  - id: "HBJG"
+    name: "河北建筑工程学院"
+    initial: "H"
+
+  - id: "HNIE"
+    name: "湖南工程学院"
+    initial: "H"
+
+  - id: "HZNU"
+    name: "杭州师范大学"
+    initial: "H"
+
   - id: "JMPT"
     name: "江门职业技术学院"
     initial: "J"
@@ -100,6 +132,10 @@ schools:
   - id: "JXLSXY"
     name: "江西旅游商贸职业学院"
     initial: "J"
+
+  - id: "LNXL"
+    name: "辽宁中医药大学杏林学院"
+    initial: "L"
 
   - id: "QDGC"
     name: "青岛工程职业学院"
@@ -147,6 +183,10 @@ schools:
 
   - id: "WUYI"
     name: "武夷学院"
+    initial: "W"
+
+  - id: "WXU"
+    name: "无锡学院"
     initial: "W"
 
   - id: "XUPT"

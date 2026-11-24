@@ -1,0 +1,10 @@
+# 鄂州职业大学（jwxt.ezu.cn）
+
+adapters:
+  - adapter_id: "EZPC_01"
+    adapter_name: "鄂州职业大学EZPC"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "ezpc.js"
+    import_url: "https://jwxt.ezu.cn/ezzyjw/frame/homes.action"
+    maintainer: "Nexio课程表"
+    description: "教务系统课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学期列表、整学期课程与作息节次。导入前会二次确认。"

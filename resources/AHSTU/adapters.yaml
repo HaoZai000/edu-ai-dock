@@ -1,0 +1,10 @@
+# 安徽科技工程大学（jwxt.ahstu.edu.cn）
+
+adapters:
+  - adapter_id: "AHSTU_01"
+    adapter_name: "安徽科技工程大学AHSTU"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "ahstu.js"
+    import_url: "https://jwxt.ahstu.edu.cn/eams/"
+    maintainer: "Nexio课程表"
+    description: "教务系统课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期列表、整学期课程与教学周。导入前会二次确认。"

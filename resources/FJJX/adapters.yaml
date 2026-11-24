@@ -1,0 +1,8 @@
+adapters:
+  - adapter_id: "FJJX_01"
+    adapter_name: "福建江夏学院FJJX"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "fjjx.js"
+    import_url: "https://ehall.fjjxu.edu.cn/new/index.html"
+    maintainer: "Nexio课程表"
+    description: "教务系统课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期、整学期课表与作息节次。需在教务系统（jwglxt）页面内运行，导入前会二次确认。"

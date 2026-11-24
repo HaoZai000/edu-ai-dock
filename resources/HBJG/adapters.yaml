@@ -1,0 +1,8 @@
+adapters:
+  - adapter_id: "HBJG_01"
+    adapter_name: "河北建筑工程学院HBJG"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "hbjg.js"
+    import_url: "https://jwx.hebiace.edu.cn"
+    maintainer: "Nexio课程表"
+    description: "教务课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期、整学期课程、教师、教室、周次与节次作息。导入前会二次确认。"
