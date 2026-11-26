@@ -1,0 +1,8 @@
+adapters:
+  - adapter_id: "ZZU_01"
+    adapter_name: "郑州大学ZZU"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "zzu.js"
+    import_url: "https://jwxt.zzu.edu.cn/student/for-std/course-table"
+    maintainer: "Nexio课程表"
+    description: "教务系统课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期、整学期课表与作息节次。导入前会二次确认。"

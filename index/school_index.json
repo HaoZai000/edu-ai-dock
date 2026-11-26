@@ -1,6 +1,6 @@
 {
   "protocol_version": 1,
-  "version_id": "2026-11-24T10:46:39Z",
+  "version_id": "2026-11-26T00:01:22Z",
   "schools": [
     {
       "id": "AHSTU",
@@ -94,6 +94,38 @@
           "asset_js_path": "resources/CSMU/csmu.js",
           "import_url": "http://oa.csmu.edu.cn:8099/jsxsd",
           "description": "青果教务课表适配。登录教务系统后直接点导入即可；脚本会让用户选择学年学期，解析整学期课表并写入作息。",
+          "maintainer": "Nexio课程表"
+        }
+      ]
+    },
+    {
+      "id": "CDUTETC",
+      "name": "成都理工大学工程技术学院",
+      "initial": "C",
+      "adapters": [
+        {
+          "adapter_id": "CDUTETC_01",
+          "adapter_name": "成都理工大学工程技术学院CDUTETC",
+          "category": 2,
+          "asset_js_path": "resources/CDUTETC/cdutetc.js",
+          "import_url": "https://ac.cdutetc.cn/lyuapServer/login?service=https://jwgl.cdutetc.cn/sso/lyiotlogin",
+          "description": "教务系统课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期、整学期课表与作息节次。导入前会二次确认。",
+          "maintainer": "Nexio课程表"
+        }
+      ]
+    },
+    {
+      "id": "CQNU",
+      "name": "重庆师范大学",
+      "initial": "C",
+      "adapters": [
+        {
+          "adapter_id": "CQNU_01",
+          "adapter_name": "重庆师范大学CQNU",
+          "category": 2,
+          "asset_js_path": "resources/CQNU/cqnu.js",
+          "import_url": "https://jwglxt.cqnu.edu.cn/jwglxt/xtgl/login_slogin.html",
+          "description": "教务系统课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期、整学期课表与作息节次。导入前会二次确认。",
           "maintainer": "Nexio课程表"
         }
       ]
@@ -483,6 +515,38 @@
       ]
     },
     {
+      "id": "SCAU",
+      "name": "华南农业大学",
+      "initial": "H",
+      "adapters": [
+        {
+          "adapter_id": "SCAU_01",
+          "adapter_name": "华南农业大学SCAU",
+          "category": 2,
+          "asset_js_path": "resources/SCAU/scau.js",
+          "import_url": "https://jwzf.scau.edu.cn/jwglxt/xtgl/index_initMenu.html",
+          "description": "教务系统课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期、整学期课表与作息节次。导入前会二次确认。",
+          "maintainer": "Nexio课程表"
+        }
+      ]
+    },
+    {
+      "id": "HEBUST",
+      "name": "河北科技大学",
+      "initial": "H",
+      "adapters": [
+        {
+          "adapter_id": "HEBUST_01",
+          "adapter_name": "河北科技大学HEBUST",
+          "category": 2,
+          "asset_js_path": "resources/HEBUST/hebust.js",
+          "import_url": "https://jw.hebust.edu.cn/hbkjjw/frame/homepage",
+          "description": "教务系统课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期、整学期课表与作息节次。导入前会二次确认。",
+          "maintainer": "Nexio课程表"
+        }
+      ]
+    },
+    {
       "id": "JMPT",
       "name": "江门职业技术学院",
       "initial": "J",
@@ -739,6 +803,22 @@
       ]
     },
     {
+      "id": "WHPU",
+      "name": "武汉轻工大学",
+      "initial": "W",
+      "adapters": [
+        {
+          "adapter_id": "WHPU_01",
+          "adapter_name": "武汉轻工大学WHPU",
+          "category": 2,
+          "asset_js_path": "resources/WHPU/whpu.js",
+          "import_url": "https://jwglxt.whpu.edu.cn/xtgl/login_slogin.html",
+          "description": "教务系统课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期、整学期课表与作息节次。导入前会二次确认。",
+          "maintainer": "Nexio课程表"
+        }
+      ]
+    },
+    {
       "id": "XUPT",
       "name": "西安邮电大学",
       "initial": "X",
@@ -894,6 +974,38 @@
           "asset_js_path": "resources/ZZKJ/zzkj.js",
           "import_url": "https://jwgl.zit.edu.cn/cas/login.action",
           "description": "定制 JSP 教务课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期、整学期课表、作息与开学日期。",
+          "maintainer": "Nexio课程表"
+        }
+      ]
+    },
+    {
+      "id": "ZUA",
+      "name": "郑州航空工业管理学院",
+      "initial": "Z",
+      "adapters": [
+        {
+          "adapter_id": "ZUA_01",
+          "adapter_name": "郑州航空工业管理学院ZUA",
+          "category": 2,
+          "asset_js_path": "resources/ZUA/zua.js",
+          "import_url": "https://jwglxt.zua.edu.cn/eams/loginExt.action",
+          "description": "教务系统课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期、整学期课表与作息节次。导入前会二次确认。",
+          "maintainer": "Nexio课程表"
+        }
+      ]
+    },
+    {
+      "id": "ZZU",
+      "name": "郑州大学",
+      "initial": "Z",
+      "adapters": [
+        {
+          "adapter_id": "ZZU_01",
+          "adapter_name": "郑州大学ZZU",
+          "category": 2,
+          "asset_js_path": "resources/ZZU/zzu.js",
+          "import_url": "https://jwxt.zzu.edu.cn/student/for-std/course-table",
+          "description": "教务系统课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期、整学期课表与作息节次。导入前会二次确认。",
           "maintainer": "Nexio课程表"
         }
       ]

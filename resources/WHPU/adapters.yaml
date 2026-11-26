@@ -1,0 +1,8 @@
+adapters:
+  - adapter_id: "WHPU_01"
+    adapter_name: "武汉轻工大学WHPU"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "whpu.js"
+    import_url: "https://jwglxt.whpu.edu.cn/xtgl/login_slogin.html"
+    maintainer: "Nexio课程表"
+    description: "教务系统课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期、整学期课表与作息节次。导入前会二次确认。"

@@ -29,6 +29,14 @@ schools:
     name: "长沙医学院"
     initial: "C"
 
+  - id: "CDUTETC"
+    name: "成都理工大学工程技术学院"
+    initial: "C"
+
+  - id: "CQNU"
+    name: "重庆师范大学"
+    initial: "C"
+
   - id: "DLGC"
     name: "大连工程学院"
     initial: "D"
@@ -125,6 +133,14 @@ schools:
     name: "杭州师范大学"
     initial: "H"
 
+  - id: "SCAU"
+    name: "华南农业大学"
+    initial: "H"
+
+  - id: "HEBUST"
+    name: "河北科技大学"
+    initial: "H"
+
   - id: "JMPT"
     name: "江门职业技术学院"
     initial: "J"
@@ -189,6 +205,10 @@ schools:
     name: "无锡学院"
     initial: "W"
 
+  - id: "WHPU"
+    name: "武汉轻工大学"
+    initial: "W"
+
   - id: "XUPT"
     name: "西安邮电大学"
     initial: "X"
@@ -227,4 +247,12 @@ schools:
 
   - id: "ZZKJ"
     name: "郑州科技学院"
+    initial: "Z"
+
+  - id: "ZUA"
+    name: "郑州航空工业管理学院"
+    initial: "Z"
+
+  - id: "ZZU"
+    name: "郑州大学"
     initial: "Z"

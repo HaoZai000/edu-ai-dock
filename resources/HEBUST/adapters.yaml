@@ -1,0 +1,8 @@
+adapters:
+  - adapter_id: "HEBUST_01"
+    adapter_name: "河北科技大学HEBUST"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "hebust.js"
+    import_url: "https://jw.hebust.edu.cn/hbkjjw/frame/homepage"
+    maintainer: "Nexio课程表"
+    description: "教务系统课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期、整学期课表与作息节次。导入前会二次确认。"

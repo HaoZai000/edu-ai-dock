@@ -1,0 +1,8 @@
+adapters:
+  - adapter_id: "CDUTETC_01"
+    adapter_name: "成都理工大学工程技术学院CDUTETC"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "cdutetc.js"
+    import_url: "https://ac.cdutetc.cn/lyuapServer/login?service=https://jwgl.cdutetc.cn/sso/lyiotlogin"
+    maintainer: "Nexio课程表"
+    description: "教务系统课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期、整学期课表与作息节次。导入前会二次确认。"
