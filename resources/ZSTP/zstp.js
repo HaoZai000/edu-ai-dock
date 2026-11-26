@@ -8,7 +8,19 @@
     const entry = '/kbcx/xskbcx_cxXskbcxIndex.html?gnmkdm=N2151';
     const schedule = '/kbcx/xskbcx_cxXsgrkb.html?gnmkdm=N2151';
     const calendar = '/kbcx/xskbcxZccx_cxZcByXnxq.html?gnmkdm=N2154';
-    const periods = '/kbcx/xskbcx_cxRjc.html?gnmkdm=N2151';
+    // 依据学校教务在 2026–2027 学年第 1 学期提供的 10 节作息。
+    const timeSlots = [
+        { number: 1, startTime: '08:30', endTime: '09:15' },
+        { number: 2, startTime: '09:20', endTime: '10:05' },
+        { number: 3, startTime: '10:25', endTime: '11:10' },
+        { number: 4, startTime: '11:15', endTime: '12:00' },
+        { number: 5, startTime: '14:00', endTime: '14:45' },
+        { number: 6, startTime: '14:50', endTime: '15:35' },
+        { number: 7, startTime: '15:55', endTime: '16:40' },
+        { number: 8, startTime: '16:45', endTime: '17:30' },
+        { number: 9, startTime: '19:00', endTime: '19:45' },
+        { number: 10, startTime: '19:55', endTime: '20:40' },
+    ];
 
     async function request(path, label, params) {
         const controller = new AbortController();
@@ -77,22 +89,6 @@
         return { semesterStartDate: startDate, semesterTotalWeeks: totalWeeks };
     }
 
-    function readPeriods(rows) {
-        if (!Array.isArray(rows) || !rows.length) throw new Error('所选学期未提供节次作息。');
-        const slots = rows.map(row => ({
-            number: Number(row.jcmc), startTime: String(row.qssj ?? ''), endTime: String(row.jssj ?? ''),
-        })).sort((a, b) => a.number - b.number);
-        const clock = /^(?:[01]\d|2[0-3]):[0-5]\d$/;
-        for (let i = 0; i < slots.length; i++) {
-            const { number, startTime, endTime } = slots[i];
-            if (number !== i + 1 || !clock.test(startTime) || !clock.test(endTime) || startTime >= endTime ||
-                (i > 0 && startTime < slots[i - 1].endTime)) {
-                throw new Error('教务返回的节次作息编号或时间有误。');
-            }
-        }
-        return slots;
-    }
-
     function readWeeks(value, totalWeeks) {
         const weeks = new Set();
         const text = String(value ?? '').replace(/\s+/g, '').replace(/（/g, '(').replace(/）/g, ')');
@@ -111,7 +107,7 @@
         return weeks;
     }
 
-    function readCourses(rows, config, slotsByCampus, baseSlots) {
+    function readCourses(rows, totalWeeks) {
         const grouped = new Map();
         for (const row of rows) {
             const name = String(row.kcmc ?? '').trim();
@@ -122,25 +118,19 @@
             const section = String(row.jcs ?? '').match(/^(\d+)(?:-(\d+))?$/);
             const startSection = Number(section?.[1]);
             const endSection = Number(section?.[2] ?? startSection);
-            const slots = slotsByCampus.get(String(row.xqh_id ?? ''));
             if (!name || !Number.isInteger(day) || day < 1 || day > 7 || !section ||
-                startSection < 1 || startSection > endSection || endSection > slots.length) {
+                startSection < 1 || startSection > endSection || endSection > timeSlots.length) {
                 throw new Error('教务返回的课程缺少有效的星期或节次。');
             }
-            const startTime = slots[startSection - 1].startTime;
-            const endTime = slots[endSection - 1].endTime;
-            const groupKey = JSON.stringify([row.kch_id, name, teacher, position, day, startSection, endSection, startTime, endTime]);
+            const groupKey = JSON.stringify([row.kch_id, name, teacher, position, day, startSection, endSection]);
             if (!grouped.has(groupKey)) {
                 const course = { name, teacher, position, day, startSection, endSection, weeks: new Set() };
-                if (startTime !== baseSlots[startSection - 1]?.startTime || endTime !== baseSlots[endSection - 1]?.endTime) {
-                    Object.assign(course, { isCustomTime: true, customStartTime: startTime, customEndTime: endTime });
-                }
                 const credit = Number(row.xf);
                 if (row.xf != null && row.xf !== '' && Number.isFinite(credit) && credit >= 0) course.credit = credit;
                 grouped.set(groupKey, course);
             }
             const course = grouped.get(groupKey);
-            for (const week of readWeeks(row.zcd, config.semesterTotalWeeks)) course.weeks.add(week);
+            for (const week of readWeeks(row.zcd, totalWeeks)) course.weeks.add(week);
         }
         return Array.from(grouped.values(), course => ({ ...course, weeks: [...course.weeks].sort((a, b) => a - b) }));
     }
@@ -162,24 +152,14 @@
         if (!data.kbList.length) {
             throw new Error(practicalCount ? `所选学期只有 ${practicalCount} 条未安排固定节次的集中实践。` : '所选学期没有课程。');
         }
-        const campuses = new Set();
         for (const row of data.kbList) {
             if (String(row.xnm) !== xnm || String(row.xqm) !== xqm) throw new Error('教务返回的课表与所选学期不符。');
-            campuses.add(String(row.xqh_id ?? ''));
         }
-        const [calendarRows, campusPeriods] = await Promise.all([
-            request(calendar, '校历', term),
-            Promise.all(Array.from(campuses, async campus => [
-                campus, readPeriods(await request(periods, '节次作息', { ...term, xqh_id: campus })),
-            ])),
-        ]);
-        const config = readCalendar(calendarRows);
-        const slotsByCampus = new Map(campusPeriods);
-        const baseSlots = campusPeriods[0][1];
-        const courses = readCourses(data.kbList, config, slotsByCampus, baseSlots);
+        const config = readCalendar(await request(calendar, '校历', term));
+        const courses = readCourses(data.kbList, config.semesterTotalWeeks);
 
         if (await bridge.saveCourseConfig(JSON.stringify(config)) !== true ||
-            await bridge.savePresetTimeSlots(JSON.stringify(baseSlots)) !== true ||
+            await bridge.savePresetTimeSlots(JSON.stringify(timeSlots)) !== true ||
             await bridge.saveImportedCourses(JSON.stringify(courses)) !== true) {
             throw new Error('课表导入未完成。');
         }
