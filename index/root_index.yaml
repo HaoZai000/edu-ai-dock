@@ -256,3 +256,7 @@ schools:
   - id: "ZZU"
     name: "郑州大学"
     initial: "Z"
+
+  - id: "ZSTP"
+    name: "中山火炬职业技术学院"
+    initial: "Z"

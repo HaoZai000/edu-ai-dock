@@ -1,0 +1,8 @@
+adapters:
+  - adapter_id: "ZSTP_AI_01"
+    adapter_name: "中山火炬职业技术学院教务系统"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "zstp.js"
+    import_url: "http://119.145.248.32:84/jwglxt/xtgl/login_slogin.html"
+    maintainer: "SleepDown课程表AI"
+    description: "登录新版正方教务后点击导入并选择学期，可导入整学期课表、校历和作息。仅标注周次的集中实践不会排入课表。"
