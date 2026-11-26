@@ -1,6 +1,6 @@
 {
   "protocol_version": 1,
-  "version_id": "2026-11-26T00:01:22Z",
+  "version_id": "2026-11-26T04:15:09Z",
   "schools": [
     {
       "id": "AHSTU",
@@ -1007,6 +1007,22 @@
           "import_url": "https://jwxt.zzu.edu.cn/student/for-std/course-table",
           "description": "教务系统课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期、整学期课表与作息节次。导入前会二次确认。",
           "maintainer": "Nexio课程表"
+        }
+      ]
+    },
+    {
+      "id": "ZSTP",
+      "name": "中山火炬职业技术学院",
+      "initial": "Z",
+      "adapters": [
+        {
+          "adapter_id": "ZSTP_AI_01",
+          "adapter_name": "中山火炬职业技术学院教务系统",
+          "category": 2,
+          "asset_js_path": "resources/ZSTP/zstp.js",
+          "import_url": "http://119.145.248.32:84/jwglxt/xtgl/login_slogin.html",
+          "description": "登录新版正方教务后点击导入并选择学期，可导入整学期课表、校历和作息。仅标注周次的集中实践不会排入课表。",
+          "maintainer": "SleepDown课程表AI"
         }
       ]
     }

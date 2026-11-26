@@ -8,7 +8,7 @@
 - Gitee（镜像）：`https://gitee.com/com_haooz_account/edu-ai-dock`
 
 <!-- AUTO_STATS_START -->
-当前共收录 **63** 所学校、**63** 个适配脚本（由 `scripts/build_index.py` 自动统计，请勿手改本段）。
+当前共收录 **64** 所学校、**64** 个适配脚本（由 `scripts/build_index.py` 自动统计，请勿手改本段）。
 <!-- AUTO_STATS_END -->
 
 ## 结构
