@@ -81,6 +81,10 @@ schools:
     name: "广西职业师范学院"
     initial: "G"
 
+  - id: "GXUFE"
+    name: "广西财经学院"
+    initial: "G"
+
   - id: "HUWAI"
     name: "湖南外国语职业学院"
     initial: "H"
@@ -123,6 +127,10 @@ schools:
 
   - id: "HBJG"
     name: "河北建筑工程学院"
+    initial: "H"
+
+  - id: "HBDZHX"
+    name: "河北地质大学华信学院"
     initial: "H"
 
   - id: "HNIE"

@@ -1,0 +1,8 @@
+adapters:
+  - adapter_id: "GXUFE_01"
+    adapter_name: "广西财经学院GXUFE"
+    category: "BACHELOR_AND_ASSOCIATE"
+    asset_js_path: "gxufe.js"
+    import_url: "https://jwglxt.gxufe.edu.cn/frame/homes.action"
+    maintainer: "Nexio课程表"
+    description: "教务系统课表适配。登录后直接点导入即可，不需要手动进入课表页；脚本会自动读取学年学期与整学期课表。作息未包含，使用默认时间。导入前会二次确认。"
